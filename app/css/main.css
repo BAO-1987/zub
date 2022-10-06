@@ -1434,6 +1434,9 @@ section {
 .gallery {
   position: relative;
 }
+.gallery .btn {
+  margin: 0 auto;
+}
 .gallery::before {
   content: "";
   position: absolute;
@@ -2666,6 +2669,7 @@ section {
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
+  font-size: calc(14px + 2 * ((100vw - 320px) / 1280));
 }
 .footer-develop__link {
   display: -webkit-box;

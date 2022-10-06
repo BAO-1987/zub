@@ -1,6 +1,10 @@
 .gallery {
   position: relative;
 
+  .btn {
+    margin: 0 auto;
+  }
+
   &::before {
     content: "";
     position: absolute;

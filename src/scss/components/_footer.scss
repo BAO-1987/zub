@@ -50,6 +50,7 @@
 
 .footer-develop {
   @include flex-all-center;
+   @include adaptive_size("font-size", 16, 14);
 
   &__link {
     @include flex-all-center;
