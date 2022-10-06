@@ -1,0 +1,55 @@
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  margin-bottom: 20px;
+  padding: rem(63) 0 rem(52);
+  background-color: var(--color-black);
+
+  @include for-width(-tablet) {
+    margin-bottom: 10px;
+    padding: 20px 0;
+  }
+
+  .logo {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 50%;
+    margin: 0 auto;
+    transform: translateY(-41%);
+
+    @include for-width(-tablet) {
+      transform: translateY(-50%);
+    }
+  }
+
+  &__contact {
+    position: absolute;
+    right: 10px;
+    top: 18px;
+    display: none;
+
+    &::before {
+      content: "";
+      position: absolute;
+      right: 5px;
+      mask-image: url("../img/sprite.svg#old-phone");
+      mask-position: bottom;
+      mask-repeat: no-repeat;
+      mask-size: cover;
+      width: 35px;
+      height: 35px;
+      background-color: var(--color-white);
+      transition: background-color 0.3s linear;
+    }
+
+    &:hover::before {
+      background-color: var(--color-active);
+    }
+
+    @include for-width(-tablet) {
+      display: block;
+    }
+  }
+}
