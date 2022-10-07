@@ -54,7 +54,7 @@
         left: 0;
       }
 
-      @include for-width(-mobile-s) {
+      @include for-width(-mobile-sl) {
         width: 20px;
         height: 20px;
       }
@@ -64,6 +64,10 @@
       padding-top: rem(55);
       max-width: max-content;
       text-align: center;
+    }
+
+    @include for-width(-mobile-sl) {
+      padding-top: rem(25);
     }
   }
 
