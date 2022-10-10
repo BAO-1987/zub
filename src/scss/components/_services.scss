@@ -27,46 +27,119 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     margin-bottom: rem(69);
-    gap: clamp(20px, 3.25rem, 60px);
+    gap: rem(51);
 
-    @include for-width(-tablet) {
-      grid-template-columns: repeat(2, 1fr);
-      grid-template-rows: repeat(2, auto);
-      gap: 20px;
+    @include for-width (-desktop-med) {
+      gap: 10px;
     }
 
     @include for-width(-mobile-l) {
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(2, auto);
+    }
+
+    @include for-width(-mobile-sl) {
       grid-template-columns: repeat(1, 1fr);
-      grid-template-rows: repeat(3, 1fr);
-      gap: 20px;
     }
   }
 
   &__item {
     @include bg-cover;
+    @include flex-all-center;
+
+    position: relative;
+    z-index: 1;
+    flex-direction: column;
+    border: 1px solid var(--color-white);
+    min-height: 240px;
+    transition: border 0.3s linear;
+
+    &::before {
+      content: "";
+      position: absolute;
+      z-index: -1;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(0deg, rgba(0, 0, 0, 0.83), rgba(0, 0, 0, 0.83));
+      backdrop-filter: blur(1px);
+    }
+
+    h3 {
+      @include h2;
+    }
+
+    &:hover {
+      border: 1px solid var(--color-active);
+    }
 
     &:last-child {
-      @include for-width(-tablet) {
+      @include for-width(-mobile-l) {
         grid-column: 2 span;
+       
       }
 
-      @include for-width(-mobile-l) {
+      @include for-width(-mobile-sl) {
         grid-column: auto;
       }
+
+      }
+
+      @include for-width(-mobile-sl) {
+        min-height: 150px;
+      }
+    }
+
+    &__link {
+      @include adaptive_size("font-size", 16, 14);
+
+      position: relative;
+      display: inline-flex;
+      align-items: center;
+      padding-right: 30px;
+      transition: color 0.3s linear, background-color 0.3s linear;
+
+      &::before {
+        content: "";
+        position: absolute;
+        right: 0;
+        mask-image: url("../img/sprite.svg#small-arrow");
+        mask-position: center;
+        mask-repeat: no-repeat;
+        mask-size: cover;
+        width: 16px;
+        height: 16px;
+        background-color: var(--color-white);
+        transition: background-color 0.3s linear;
+
+        @include for-width(-mobile-l) {
+          width: 14px;
+          height: 14px;
+        }
+      }
+
+      &:hover {
+
+        color: var(--color-active);
+
+        &::before {
+          background-color: var(--color-active);
+        }
+      }
+    }
+
+
+
+    &__more {
+      margin: 0 auto;
+      width: 100%;
+      max-width: 420px;
+
+      @include for-width(-mobile-s) {
+        max-width: 300px;
+      }
+    }
+
+    .content {
+      gap: 50px;
     }
   }
-
-  &__more {
-    margin: 0 auto;
-    width: 100%;
-    max-width: 420px;
-
-    @include for-width(-mobile-s) {
-      max-width: 300px;
-    }
-  }
-
-  .content {
-    gap: 50px;
-  }
-}
