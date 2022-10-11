@@ -56,62 +56,21 @@
   }
 
   &__content {
-    position: relative;
-    text-align: center;
     gap: rem(50);
 
     @include for-width(-tablet) {
       gap: rem(25);
     }
-  }
 
-  &__link {
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    display: inline-flex;
-    border: 1px solid var(--color-white);
-    padding: rem(15) rem(30);
-    width: 84px;
-    height: 54px;
-    transition: border 0.3s linear;
-
-    &::before {
-      content: "";
-      position: absolute;
-      mask-image: url("../img/sprite.svg#chats");
-      mask-position: center;
-      mask-repeat: no-repeat;
-      mask-size: cover;
-      width: 24px;
-      height: 24px;
-      background-color: var(--color-white);
-      transition: background-color 0.3s linear;
-    }
-
-    &:hover {
-      border: 1px solid var(--color-blue);
-
-      &::before {
-        background-color: var(--color-blue);
-      }
-    }
-
-    &:active {
-      border: 1px solid var(--color-active);
-
-      &::before {
-        background-color: var(--color-active);
-      }
-    }
-
-    @include for-width(-tablet) {
-      position: relative;
-      order: -1;
+    @include for-width(-mobile-sl) {
+      flex-direction: column;
     }
   }
+
 
   @include for-width(-tablet) {
     padding-top: rem(25);
   }
 }
+
+

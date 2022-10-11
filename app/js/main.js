@@ -17,6 +17,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_digits__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./components/_digits */ "./src/js/components/_digits.js");
 /* harmony import */ var _components_digits__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_components_digits__WEBPACK_IMPORTED_MODULE_4__);
 /* harmony import */ var _components_ellipsis__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./components/_ellipsis */ "./src/js/components/_ellipsis.js");
+/* harmony import */ var _components_ellipsis__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_components_ellipsis__WEBPACK_IMPORTED_MODULE_5__);
 /* harmony import */ var _components_show_more__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./components/_show-more */ "./src/js/components/_show-more.js");
 /* harmony import */ var _components_show_more__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_components_show_more__WEBPACK_IMPORTED_MODULE_6__);
 /* harmony import */ var _components_modal__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./components/_modal */ "./src/js/components/_modal.js");
@@ -286,22 +287,18 @@ document.addEventListener('DOMContentLoaded', () => {
 /*!****************************************!*\
   !*** ./src/js/components/_ellipsis.js ***!
   \****************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+/***/ (() => {
 
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _vendor_ellipsis_min_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../vendor/ellipsis.min.js */ "./src/js/vendor/ellipsis.min.js");
-/* harmony import */ var _vendor_ellipsis_min_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_vendor_ellipsis_min_js__WEBPACK_IMPORTED_MODULE_0__);
-
-_vendor_ellipsis_min_js__WEBPACK_IMPORTED_MODULE_0___default()({
-  ellipsis: '…',
-  debounce: 300,
-  responsive: true,
-  className: '.article__text',
-  lines: 3,
-  portrait: null,
-  break_word: true
-});
+// import Ellipsis from '../vendor/ellipsis.min.js';
+// Ellipsis({
+//   ellipsis: '…',
+//   debounce: 300,
+//   responsive: true,
+//   className: '.article__text',
+//   lines: 3,
+//   portrait: null,
+//   break_word: true,
+// });
 
 /***/ }),
 
@@ -466,7 +463,7 @@ const newsSlider = new swiper_bundle__WEBPACK_IMPORTED_MODULE_0__["default"](".n
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var graph_tabs__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! graph-tabs */ "./node_modules/graph-tabs/src/graph-tabs.js");
- // const tabs = new GraphTabs('gallery');
+
 
 if (document.querySelector('.gallery')) {
   const tabs = new graph_tabs__WEBPACK_IMPORTED_MODULE_0__["default"]('.gallery');
