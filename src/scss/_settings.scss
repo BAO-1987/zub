@@ -493,10 +493,10 @@ h3 {
 .content {
   @include flex-all-center;
 
-  // @include for-width(-tablet) {
-  //   flex-direction: column;
-  //   gap: 25px;
-  // }
+  @include for-width(-mobile-sl) {
+    flex-direction: column;
+    gap: 25px;
+  }
 }
 
 .link {

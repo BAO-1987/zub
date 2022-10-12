@@ -31,7 +31,7 @@
     counter-reset: li;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: clamp(20px, 3.25rem, 60px);
+    gap: rem(50);
 
     @include for-width(-desktop-lg) {
       text-align: center;
@@ -44,7 +44,7 @@
       gap: 20px;
     }
 
-    @include for-width(-mobile-l) {
+    @include for-width(-mobile-md) {
       grid-template-columns: repeat(1, 1fr);
       grid-template-rows: repeat(3, 1fr);
     }
@@ -80,7 +80,7 @@
   &__item {
     position: relative;
     border: 1px solid var(--color-white);
-    padding: 30px 30px 35px;
+    padding: rem(30) rem(30) rem(35);
     letter-spacing: 0.038em;
     transition-property: box-shadow, border;
     transition-duration: 0.3s;
@@ -89,6 +89,7 @@
     &::before {
       @include adaptive_size("font-size", 100, 50);
 
+      width: 100%;
       counter-increment: li;
       content: counter(li, decimal-leading-zero);
       font-weight: 900;
@@ -103,8 +104,8 @@
       box-shadow: 12px 12px 25px var(--color-active) inset;
     }
 
-    @include for-width(-desktop-lg) {
-      padding: 20px 20px 25px;
+    @include for-width(-mobile-l) {
+      padding: 15px;
     }
 
     &:last-child {

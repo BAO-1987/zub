@@ -525,6 +525,15 @@ h3::first-letter {
   -ms-flex-pack: center;
   justify-content: center;
 }
+@media (max-width: calc(29.75em - 0.0625em)) {
+  .content {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    gap: 25px;
+  }
+}
 
 .link {
   font-size: calc(14px + 2 * ((100vw - 320px) / 1600));
@@ -1989,7 +1998,7 @@ h3::first-letter {
   display: grid;
   -ms-grid-columns: (1fr)[3];
   grid-template-columns: repeat(3, 1fr);
-  gap: clamp(20px, 3.25rem, 60px);
+  gap: 3.125rem;
 }
 @media (max-width: calc(90em - 0.0625em)) {
   .stages__list {
@@ -2006,7 +2015,7 @@ h3::first-letter {
     gap: 20px;
   }
 }
-@media (max-width: calc(48em - 0.0625em)) {
+@media (max-width: calc(36em - 0.0625em)) {
   .stages__list {
     -ms-grid-columns: (1fr)[1];
     grid-template-columns: repeat(1, 1fr);
@@ -2044,7 +2053,7 @@ h3::first-letter {
 .stages__item {
   position: relative;
   border: 1px solid var(--color-white);
-  padding: 30px 30px 35px;
+  padding: 1.875rem 1.875rem 2.1875rem;
   letter-spacing: 0.038em;
   -webkit-transition-property: border, -webkit-box-shadow;
   transition-property: border, -webkit-box-shadow;
@@ -2060,6 +2069,7 @@ h3::first-letter {
 }
 .stages__item::before {
   font-size: calc(50px + 50 * ((100vw - 320px) / 1600));
+  width: 100%;
   counter-increment: li;
   content: counter(li, decimal-leading-zero);
   font-weight: 900;
@@ -2073,9 +2083,9 @@ h3::first-letter {
   -webkit-box-shadow: 12px 12px 25px var(--color-active) inset;
   box-shadow: 12px 12px 25px var(--color-active) inset;
 }
-@media (max-width: calc(90em - 0.0625em)) {
+@media (max-width: calc(48em - 0.0625em)) {
   .stages__item {
-    padding: 20px 20px 25px;
+    padding: 15px;
   }
 }
 @media (max-width: calc(62em - 0.0625em)) {
