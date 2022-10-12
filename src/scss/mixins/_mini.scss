@@ -55,6 +55,11 @@
   align-items: center;
 }
 
+@mixin flex-c {
+  display: flex;
+  flex-direction: column;
+}
+
 $browser-context: 14; // Default
 
 @function rem($pixels, $context: $browser-context) {

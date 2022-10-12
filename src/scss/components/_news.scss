@@ -74,8 +74,8 @@
     width: 100%;
     max-width: 332px;
 
-    @include for-width(-mobile-s) {
-      max-width: 300px;
+    @include for-width(-mobile-sl) {
+      max-width: 280px;
     }
   }
 }

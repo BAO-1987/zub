@@ -3,7 +3,7 @@
   font-family: var(--font-family);
   font-weight: 500;
   font-feature-settings: "pnum"on, "lnum"on;
-  font-size: 16px;
+  @include adaptive_size("font-size", 16, 14);
   line-height: 1.6;
   letter-spacing: 0.06em;
   color: var(--color-white);
@@ -205,8 +205,6 @@ h3 {
     background-color: var(--color-active);
   }
 
-
-
   // @include for-width(-mobile-sl) {
   //   padding: rem(17) rem(40) rem(17) rem(17);
 
@@ -277,7 +275,15 @@ h3 {
       width: 27px;
       height: 27px;
       background-color: var(--color-white);
+
+      // @include for-width(-tablet) {
+      //   right: 0;
+      // }
     }
+
+    // @include for-width(-tablet) {
+    //   padding: rem(19) rem(60) rem(18) rem(60);
+    // }
   }
 
   &--show-more {
@@ -370,8 +376,6 @@ h3 {
   //   @include adaptive_size("font-size", 14, 12);
   // }
 }
-
-
 
 .btn-reset {
   border: none;
@@ -525,6 +529,18 @@ h3 {
       width: 14px;
       height: 14px;
     }
+  }
+
+  &:hover {
+    color: var(--color-active);
+
+    &:before {
+      background-color: var(--color-active);
+    }
+  }
+
+  @include for-width(-mobile-sl) {
+    padding-right: 15px;
   }
 }
 

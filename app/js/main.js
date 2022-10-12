@@ -397,25 +397,7 @@ const reviewsSlider = new swiper_bundle__WEBPACK_IMPORTED_MODULE_0__["default"](
   navigation: {
     nextEl: ".reviews__next",
     prevEl: ".reviews__prev"
-  } // breakpoints: {
-  //   430: {
-  //     slidesPerView: 2,
-  //     spaceBetween: 10,
-  //   },
-  //   580: {
-  //     slidesPerView: 2,
-  //     spaceBetween: 10,
-  //   },
-  //   750: {
-  //     slidesPerView: 3,
-  //     spaceBetween: 10,
-  //   },
-  //   992: {
-  //     slidesPerView: 4,
-  //     spaceBetween: 20,
-  //   },
-  // }
-
+  }
 });
 const newsSlider = new swiper_bundle__WEBPACK_IMPORTED_MODULE_0__["default"](".news-slider", {
   slidesPerView: 1,
@@ -434,11 +416,10 @@ const newsSlider = new swiper_bundle__WEBPACK_IMPORTED_MODULE_0__["default"](".n
     prevEl: ".news__prev"
   },
   breakpoints: {
-    475: {
-      slidesPerView: 1,
-      spaceBetween: 20
+    320: {
+      slidesPerView: 1.5
     },
-    620: {
+    576: {
       slidesPerView: 2
     },
     992: {

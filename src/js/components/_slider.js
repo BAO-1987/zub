@@ -1,7 +1,6 @@
 import Swiper, {
   Navigation,
   Pagination,
-  Scrollbar
 } from 'swiper/bundle';
 
 const reviewsSlider = new Swiper(".reviews-slider", {
@@ -22,31 +21,6 @@ const reviewsSlider = new Swiper(".reviews-slider", {
     nextEl: ".reviews__next",
     prevEl: ".reviews__prev",
   },
-
-
-  // breakpoints: {
-
-  //   430: {
-  //     slidesPerView: 2,
-  //     spaceBetween: 10,
-  //   },
-
-  //   580: {
-  //     slidesPerView: 2,
-  //     spaceBetween: 10,
-  //   },
-
-  //   750: {
-  //     slidesPerView: 3,
-  //     spaceBetween: 10,
-  //   },
-
-  //   992: {
-  //     slidesPerView: 4,
-  //     spaceBetween: 20,
-  //   },
-  // }
-
 });
 
 const newsSlider = new Swiper(".news-slider", {
@@ -71,12 +45,12 @@ const newsSlider = new Swiper(".news-slider", {
 
 
   breakpoints: {
-    475: {
-      slidesPerView: 1,
-      spaceBetween: 20,
-    },
 
-    620: {
+    320: {
+      slidesPerView: 1.5,
+    },
+  
+   576: {
       slidesPerView: 2,
     },
 

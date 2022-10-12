@@ -1,4 +1,11 @@
 .graph-modal {
+
+  .form {
+    .btn--cursor {
+      width: 100%;
+    }
+  }
+
   &__container {
     background-color: var(--color-black);
     padding: rem(70) rem(200);

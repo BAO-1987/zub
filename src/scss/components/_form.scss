@@ -1,21 +1,10 @@
 .form {
-  .btn {
-    width: 100%;
-
-    @include for-width(-mobile-md) {
-      padding: rem(19) rem(60) rem(18) rem(60);
-
-      &::before {
-        right: 20px;
-      }
-    }
-  }
 
   &__box {
     position: relative;
     margin-bottom: rem(50);
 
-    input:focus + label {
+    input:focus+label {
       top: -10px;
       font-size: 14px;
     }
@@ -56,10 +45,8 @@
   }
 
   &__content {
-    display: block;
+    @include flex-all-center;
     padding-left: 50px;
-    width: 100%;
-    max-width: 345px;
     font-size: 14px;
     cursor: pointer;
 
@@ -90,19 +77,23 @@
       opacity: 0;
       transition: opacity 0.3s ease-in-out;
     }
+
+    @include for-width(-mobile-l) {
+      font-size: 10px;
+    }
   }
 }
 
-.custom-checkbox__field:checked + .custom-checkbox__content::after {
+.custom-checkbox__field:checked+.custom-checkbox__content::after {
   opacity: 1;
 }
 
-.custom-checkbox__field:focus + .custom-checkbox__content::before {
+.custom-checkbox__field:focus+.custom-checkbox__content::before {
   outline: 2px solid var(--color-blue);
   outline-offset: 2px;
 }
 
-.custom-checkbox__field:disabled + .custom-checkbox__content {
+.custom-checkbox__field:disabled+.custom-checkbox__content {
   opacity: 0.4;
   pointer-events: none;
 }

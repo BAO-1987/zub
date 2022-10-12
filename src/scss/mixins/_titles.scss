@@ -12,7 +12,7 @@
 }
 
 @mixin h2 {
-  @include adaptive_size("font-size", 25, 20);
+  @include adaptive_size("font-size", 25, 18);
 
   margin: 0 auto rem(37);
   font-weight: 500;

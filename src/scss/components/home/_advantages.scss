@@ -75,8 +75,6 @@
     }
 
     h3 {
-      @include h2;
-
       min-height: 70px;
 
       @include for-width(-mobile-l) {

@@ -4,15 +4,17 @@
   transition: border 0.3s linear;
   cursor: pointer;
   height: 100%;
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  max-width: 445px;
+  @include flex-c;
+
+  @include for-width(-mobile-sl) {
+    width: 100%;
+    max-width: 300px;
+  }
 
   &:hover {
     border: 1px solid var(--color-blue);
 
-    .article__title {
+    h3 {
       color: var(--color-blue);
     }
   }
@@ -20,16 +22,19 @@
   &__content {
     padding: rem(33) rem(51) rem(49);
 
-    display: flex;
-    flex-direction: column;
+    @include flex-c;
     flex: 1;
 
-    @include for-width (-desktop-med) {
+    @include for-width(-desktop-med) {
       padding: rem(23) rem(30) rem(20);
     }
+
+    // @include for-width(-mobile-sl) {
+    //   padding: 10px;
+    // }
   }
 
- h3 {
+  h3 {
     margin-bottom: 14px;
     transition: color 0.3s linear;
   }
@@ -38,39 +43,16 @@
     margin-top: auto;
     display: flex;
     align-items: center;
+    justify-content: space-between;
   }
 
   &__text {
     margin-bottom: rem(28);
-    // width: 100%;
-    // max-width: 345px;
   }
 
   span {
-    margin-right: auto;
+    margin-right: 10px;
     font-size: 14px;
     color: var(--color-grey);
-  }
-
-  &__more {
-    padding-right: 30px;
-    position: relative;
-    display: inline-flex;
-    align-items: center;
-    transition: color 0.3s linear, background-color 0.3s linear;
-
-    &::before {
-      content: "";
-      position: absolute;
-      right: 0;
-      mask-image: url("../img/sprite.svg#small-arrow");
-      mask-position: center;
-      mask-repeat: no-repeat;
-      mask-size: cover;
-      width: 16px;
-      height: 16px;
-      background-color: var(--color-white);
-      transition: background-color 0.3s linear;
-    }
   }
 }
