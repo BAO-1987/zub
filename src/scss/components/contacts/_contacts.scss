@@ -26,7 +26,7 @@
       justify-content: space-around;
     }
 
-    @include for-width(-mobile-md) {
+    @include for-width(-mobile-l) {
       flex-direction: column-reverse;
       align-items: center;
       gap: 25px;
@@ -45,24 +45,20 @@
   }
 
   &__list {
+    margin-right: 15px;
     display: grid;
     grid-template-columns: repeat(4, auto);
     gap: rem(50);
-    margin-right: 15px;
 
     @include for-width(-desktop-lg) {
       gap: rem(25);
     }
 
     @include for-width(-desktop-med) {
-      grid-template-columns: repeat(2, auto);
+      grid-template-columns: repeat(2, 1fr);
     }
 
     @include for-width(-mobile-l) {
-      gap: 10px;
-    }
-
-    @include for-width(-mobile-md) {
       margin: 0;
       gap: 15px;
     }
@@ -89,6 +85,10 @@
       display: inline-block;
       margin-bottom: 12px;
       padding-left: 40px;
+
+      @include for-width(-mobile-l) {
+        padding-left: 30px;
+      }
     }
 
     &--mail {
@@ -142,11 +142,10 @@
     width: 100%;
 
     @include for-width(-tablet) {
-      padding: rem(10) rem(23);
-      width: max-content;
+      padding: rem(20) rem(22);
 
       &::before {
-        right: 0;
+        right: 20px;
         width: 20px;
         height: 20px;
       }
@@ -168,7 +167,7 @@
     }
   }
 
-  @include for-width(-mobile) {
-    width: 80%;
-  }
+  // @include for-width(-mobile) {
+  //   width: 80%;
+  // }
 }

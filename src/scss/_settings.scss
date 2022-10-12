@@ -160,7 +160,7 @@ h3 {
   border: 1px solid transparent;
   padding: rem(17) rem(75) rem(17) rem(49);
   line-height: 1.6;
-  max-width: fit-content;
+  // max-width: fit-content;
   color: var(--color-white);
   background-color: var(--color-blue);
   transition-property: color, background-color, border;
@@ -478,11 +478,6 @@ h3 {
     &::before {
       background-color: var(--color-active);
     }
-  }
-
-  @include for-width(-tablet) {
-    position: relative;
-    order: -1;
   }
 }
 

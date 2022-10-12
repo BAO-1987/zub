@@ -46,7 +46,7 @@ const newsSlider = new Swiper(".news-slider", {
 
   breakpoints: {
 
-    320: {
+    350: {
       slidesPerView: 1.5,
     },
   

@@ -416,7 +416,7 @@ const newsSlider = new swiper_bundle__WEBPACK_IMPORTED_MODULE_0__["default"](".n
     prevEl: ".news__prev"
   },
   breakpoints: {
-    320: {
+    350: {
       slidesPerView: 1.5
     },
     576: {
