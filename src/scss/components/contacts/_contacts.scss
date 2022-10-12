@@ -58,15 +58,13 @@
       grid-template-columns: repeat(2, auto);
     }
 
-
-
-    @include for-width(-mobile-md) {
-      grid-template-columns: repeat(2, 1fr);
-      gap: 15px;
-    }
-
     @include for-width(-mobile-l) {
       gap: 10px;
+    }
+
+    @include for-width(-mobile-md) {
+      margin: 0;
+      gap: 15px;
     }
   }
 
@@ -153,7 +151,6 @@
         height: 20px;
       }
     }
-
 
     @include for-width(-mobile-md) {
       margin: 0 auto;

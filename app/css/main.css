@@ -180,6 +180,9 @@ h3::first-letter {
   border: 1px solid transparent;
   padding: 1.0625rem 4.6875rem 1.0625rem 3.0625rem;
   line-height: 1.6;
+  max-width: -webkit-fit-content;
+  max-width: -moz-fit-content;
+  max-width: fit-content;
   color: var(--color-white);
   background-color: var(--color-blue);
   -webkit-transition-property: color, background-color, border;
@@ -1203,12 +1206,6 @@ h3::first-letter {
     margin-bottom: 3.125rem;
   }
 }
-@media (max-width: calc(29.75em - 0.0625em)) {
-  .advantages__list {
-    -ms-grid-columns: (1fr)[1];
-    grid-template-columns: repeat(1, 1fr);
-  }
-}
 .advantages__item {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1807,16 +1804,15 @@ h3::first-letter {
     grid-template-columns: repeat(2, auto);
   }
 }
-@media (max-width: calc(36em - 0.0625em)) {
-  .contacts__list {
-    -ms-grid-columns: (1fr)[2];
-    grid-template-columns: repeat(2, 1fr);
-    gap: 15px;
-  }
-}
 @media (max-width: calc(48em - 0.0625em)) {
   .contacts__list {
     gap: 10px;
+  }
+}
+@media (max-width: calc(36em - 0.0625em)) {
+  .contacts__list {
+    margin: 0;
+    gap: 15px;
   }
 }
 .contacts__item {
@@ -2734,16 +2730,16 @@ h3::first-letter {
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
-@media (max-width: calc(62em - 0.0625em)) {
+@media (max-width: calc(48em - 0.0625em)) {
   .footer__bottom {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
     flex-direction: column;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
     text-align: center;
     gap: 25px;
   }
@@ -2772,6 +2768,16 @@ h3::first-letter {
 .footer__bottom-link:hover::before {
   background-color: var(--color-blue);
 }
+@media (max-width: calc(62em - 0.0625em)) {
+  .footer__bottom-link::before {
+    content: none;
+  }
+}
+@media (max-width: calc(62em - 0.0625em)) {
+  .footer__copyright span {
+    display: block;
+  }
+}
 
 .footer-develop {
   display: -webkit-box;
@@ -2783,7 +2789,6 @@ h3::first-letter {
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
-  font-size: calc(14px + 2 * ((100vw - 320px) / 1600));
 }
 .footer-develop__link {
   display: -webkit-box;

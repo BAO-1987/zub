@@ -45,10 +45,6 @@
       gap: 10px;
       margin-bottom: rem(50);
     }
-
-    @include for-width(-mobile-sl) {
-      grid-template-columns: repeat(1, 1fr);
-    }
   }
 
   &__item {
