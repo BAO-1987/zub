@@ -46,9 +46,14 @@
     margin: 0 auto rem(29);
   }
 
- a {
+  a {
+    padding: 0;
     text-decoration: underline;
     transition: color 0.3s linear;
+
+    &::before {
+      display: none;
+    }
 
     &:hover {
       color: var(--color-active);

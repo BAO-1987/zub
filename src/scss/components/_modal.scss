@@ -7,12 +7,8 @@
   }
 
   &__container {
-    background-color: var(--color-black);
     padding: rem(70) rem(200);
-
-    @include for-width(-tablet) {
-      padding: rem(50) rem(150);
-    }
+    background-color: var(--color-black);
 
     @include for-width(-mobile-l) {
       padding: rem(50);
@@ -26,13 +22,14 @@
   &__title {
     @include h1;
 
+    margin: 0 auto rem(40);
     width: 100%;
     max-width: 485px;
   }
 
   &__close {
-    right: 30px;
-    top: 30px;
+    right: 4%;
+    top: 4%;
     width: 25px;
     height: 25px;
     background-image: url("../img/sprite.svg#close");

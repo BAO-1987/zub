@@ -1,6 +1,6 @@
 .price {
   position: relative;
-  margin-bottom: rem(190);
+  margin-bottom: rem(100);
 
   &::before {
     content: "";
@@ -27,17 +27,9 @@
   }
 
   .text {
-    margin-bottom: rem(70);
-    max-width: 635px;
+    margin-bottom: rem(50);
   }
 
-  .content {
-    gap: 50px;
-  }
-
-  @include for-width (-desktop-med) {
-    margin-bottom: rem(100);
-  }
 
   @include for-width (-mobile-l) {
     margin-bottom: rem(50);

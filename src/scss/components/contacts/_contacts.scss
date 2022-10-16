@@ -37,7 +37,7 @@
     @include adaptive_size("font-size", 26, 20);
 
     margin-bottom: rem(49);
-    font-weight: 500;
+    text-align: left;
 
     @include for-width(-tablet) {
       text-align: center;
@@ -161,7 +161,7 @@
     @include adaptive_size("font-size", 26, 20);
 
     margin-bottom: rem(49);
-    font-weight: 500;
+    text-align: left;
 
     @include for-width(-tablet) {
       text-align: center;

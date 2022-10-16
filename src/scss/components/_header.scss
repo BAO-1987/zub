@@ -2,8 +2,8 @@
   position: sticky;
   top: 0;
   z-index: 2;
-  margin-bottom: 20px;
-  padding: rem(63) 0 rem(52);
+  margin-bottom: 10px;
+  padding: rem(63) 0 rem(62);
   background-color: var(--color-black);
 
   @include for-width(-tablet) {
@@ -37,8 +37,8 @@
       mask-position: bottom;
       mask-repeat: no-repeat;
       mask-size: cover;
-      width: 30px;
-      height: 30px;
+      width: 25px;
+      height: 25px;
       background-color: var(--color-white);
       transition: background-color 0.3s linear;
     }
