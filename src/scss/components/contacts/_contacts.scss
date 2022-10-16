@@ -150,9 +150,11 @@
     //   }
     // }
 
-    // @include for-width(-mobile-md) {
-    //   margin: 0 auto;
-    // }
+    @include for-width(-mobile-l) {
+      margin: 0 auto;
+      max-width: 280px !important;
+      width: 100%;
+    }
   }
 
   &__title {

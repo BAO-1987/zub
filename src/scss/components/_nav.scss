@@ -67,6 +67,16 @@
       &.open {
         opacity: 1;
         visibility: visible;
+
+        @include for-width(-tablet) {
+          display: block;
+        }
+      }
+
+      @include for-width(-tablet) {
+        position: relative;
+        transform: translate(0);
+        display: none;
       }
     }
   }
@@ -88,17 +98,17 @@
       bottom: -55px;
       margin: 0;
 
-      @include for-width(-tablet) {
-        display: none;
-      }
+      // @include for-width(-tablet) {
+      //   display: none;
+      // }
     }
 
     &:nth-child(odd) {
       margin-right: rem(85);
 
-       @include for-width(-desktop-med) {
-         margin-right: rem(51);
-       }
+      @include for-width(-desktop-med) {
+        margin-right: rem(51);
+      }
     }
 
     &:nth-child(4) {
@@ -188,12 +198,6 @@
           --rotate: rotate(-90deg);
 
           transform: translateY(-50%) var(--rotate);
-        }
-      }
-
-      &:hover {
-        svg {
-          transform: rotate(180deg);
         }
       }
     }

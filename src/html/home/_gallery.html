@@ -4,36 +4,46 @@
 
   <ul class="gallery__list">
 
-    @loop("../_item.html",[{
-    class: "gallery__item gallery__item--upper",
-    image: "home/gallery-home/upper-jaw",
-    imageDescr: "зображення верхньої щелепи",
-    width: "352",
-    height: "337"
-    },
-    {
-    class: "gallery__item gallery__item--cast",
-    image: "home/gallery-home/cast-jaw",
-    imageDescr: "зображення верхньої щелепи",
-    width: "352",
-    height: "337"
-    },
-    {
-    class: "gallery__item gallery__item--three",
-    image: "home/gallery-home/upper-jaw",
-    imageDescr: "зображення верхньої щелепи",
-    width: "352",
-    height: "337"
-    },
-    {
-    class: "gallery__item gallery__item--four",
-    image: "home/gallery-home/cast-jaw",
-    imageDescr: "зображення верхньої щелепи",
-    width: "352",
-    height: "337"
-    }
-    ])
+    <li class="gallery__item" data-fancybox="gallery" data-src="img/home/gallery/upper-jaw.jpg" data-width="550"
+      data-height="530">
+      <picture>
+        <source srcset="img/home/gallery/upper-jaw.avif" type="image/avif">
+        <source srcset="img/home/gallery/upper-jaw.webp" type="image/webp">
+        <img src="img/home/gallery/upper-jaw.jpg" class="gallery__img" width="352" height="337"
+          alt="зображення протеза верхньої щелепи" loading="lazy">
+      </picture>
+    </li>
 
+    <li class="gallery__item" data-fancybox="gallery" data-src="img/ahome/gallery/cast-jaw.jpg" data-width="550"
+      data-height="530">
+      <picture>
+        <source srcset="img/home/gallery/cast-jaw.avif" type="image/avif">
+        <source srcset="img/home/gallery/cast-jaw.webp" type="image/webp">
+        <img src="img/home/gallery/cast-jaw.jpg" class="gallery__img" width="352" height="337"
+          alt="зображення протеза нижньої щелепи" loading="lazy">
+      </picture>
+    </li>
+
+    <li class="gallery__item" data-fancybox="gallery" data-src="img/home/gallery/upper-jaw.jpg" data-width="550"
+      data-height="530">
+      <picture>
+        <source srcset="img/home/gallery/upper-jaw.avif" type="image/avif">
+        <source srcset="img/home/gallery/upper-jaw.webp" type="image/webp">
+        <img src="img/home/gallery/upper-jaw.jpg" class="gallery__img" width="352" height="337"
+          alt="зображення протеза верхньої щелепи" loading="lazy">
+      </picture>
+    </li>
+
+    <li class="gallery__item" data-fancybox="gallery" data-src="img/ahome/gallery/cast-jaw.jpg" data-width="550"
+      data-height="530">
+      <picture>
+        <source srcset="img/home/gallery/cast-jaw.avif" type="image/avif">
+        <source srcset="img/home/gallery/cast-jaw.webp" type="image/webp">
+        <img src="img/home/gallery/cast-jaw.jpg" class="gallery__img" width="352" height="337"
+          alt="зображення протеза нижньої щелепи" loading="lazy">
+      </picture>
+    </li>
+    
   </ul>
 
   <a class="gallery__more btn" href="https://bao-1987.github.io/zub/app/gallery">Переглянути усю галерею</a>
