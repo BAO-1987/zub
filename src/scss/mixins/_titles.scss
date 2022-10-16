@@ -1,6 +1,6 @@
 /* stylelint-disable-next-line at-rule-blacklist */
 @mixin h1 {
-  @include adaptive_size("font-size", 40, 25);
+  @include adaptive_size("font-size", 40, 20);
 
   margin: 0 auto rem(70);
   font-weight: 900;

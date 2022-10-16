@@ -2,18 +2,22 @@
   position: relative;
   padding-top: rem(52);
 
-  &::before {
+  &::before,
+  &::after {
     content: "";
     position: absolute;
-    left: rem(15);
-    top: -47%;
     z-index: -2;
-    width: 704px;
-    height: 700px;
-    background-image: url("../img/sprite.svg#hexan");
     background-position: bottom;
     background-size: cover;
     background-repeat: no-repeat;
+  }
+
+  &::before {
+    left: rem(15);
+    top: -47%;
+    width: 704px;
+    height: 700px;
+    background-image: url("../img/sprite.svg#hexan");
 
     @include for-width(-desktop-med) {
       top: 10%;
@@ -29,17 +33,11 @@
   }
 
   &::after {
-    content: "";
-    position: absolute;
     right: 0;
     bottom: -25%;
-    z-index: -2;
     width: 243px;
     height: 249px;
     background-image: url("../img/sprite.svg#hexan");
-    background-position: bottom;
-    background-size: cover;
-    background-repeat: no-repeat;
     transform: rotate(-180deg);
   }
 
@@ -56,21 +54,13 @@
   }
 
   &__content {
-    gap: rem(50);
-
-    @include for-width(-tablet) {
-      gap: rem(25);
-    }
 
     @include for-width(-mobile-sl) {
       flex-direction: column;
     }
   }
 
-
   @include for-width(-tablet) {
     padding-top: rem(25);
   }
 }
-
-

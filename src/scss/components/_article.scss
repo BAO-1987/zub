@@ -6,11 +6,6 @@
   height: 100%;
   @include flex-c;
 
-  // @include for-width(-mobile-sl) {
-  //   width: 100%;
-  //   max-width: 300px;
-  // }
-
   &:hover {
     border: 1px solid var(--color-blue);
 
@@ -40,10 +35,9 @@
   }
 
   &__timeline {
+    @include flex-all-sb;
+
     margin-top: auto;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
   }
 
   &__text {

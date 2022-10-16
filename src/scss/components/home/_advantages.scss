@@ -1,32 +1,29 @@
 .advantages {
   position: relative;
 
-  &::before {
+  &::before,
+  &::after {
     content: "";
     position: absolute;
-    left: 6%;
     bottom: 2%;
     z-index: -2;
-    width: 86px;
-    height: 86px;
-    background-image: url("../img/sprite.svg#chemical");
     background-position: bottom;
     background-size: cover;
     background-repeat: no-repeat;
   }
 
+  &::before {
+    left: 6%;
+    width: 86px;
+    height: 86px;
+    background-image: url("../img/sprite.svg#chemical");
+  }
+
   &::after {
-    content: "";
-    position: absolute;
     right: 4%;
-    bottom: 2%;
-    z-index: -2;
     width: 93px;
     height: 105px;
     background-image: url("../img/sprite.svg#small-hexan");
-    background-position: bottom;
-    background-size: cover;
-    background-repeat: no-repeat;
   }
 
   &__list {
@@ -40,41 +37,41 @@
     }
 
     @include for-width(-mobile-l) {
-      grid-template-columns: repeat(2, 1fr);
       justify-items: center;
-      gap: 10px;
+      grid-template-columns: repeat(2, 1fr);
       margin-bottom: rem(50);
+      gap: 10px;
     }
-  }
 
-  &__item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    flex-grow: 1;
+    li {
+      @include flex-cc;
 
-    text-align: center;
-    position: relative;
-    border: 1px solid var(--color-white);
-    padding: clamp(20px, 3.125rem, 60px);
-    transition-property: box-shadow, border;
-    transition-duration: 0.3s;
-    transition-timing-function: linear;
-    cursor: pointer;
+      position: relative;
+      border: 1px solid var(--color-white);
+      padding: clamp(20px, 3.125rem, 60px);
+      width: 100%;
+      max-width: 322px;
+      text-align: center;
+      transition-property: box-shadow, border;
+      transition-duration: 0.3s;
+      transition-timing-function: linear;
+      cursor: pointer;
 
-    width: 100%;
-    max-width: 322px;
+      &:hover {
+        border: 1px solid var(--color-active);
+        box-shadow: 12px 12px 25px var(--color-active) inset;
+      }
 
-    &:hover {
-      border: 1px solid var(--color-active);
-      box-shadow: 12px 12px 25px var(--color-active) inset;
+      @include for-width(-desktop-lg) {
+        padding: clamp(10px, 1.125rem, 30px);
+      }
     }
 
     h3 {
       min-height: 70px;
 
       @include for-width(-mobile-l) {
-        margin: 0 0 15px 0;
+        margin: 0 0 15px;
       }
     }
 
@@ -92,13 +89,5 @@
     p {
       margin-top: auto;
     }
-
-    @include for-width(-desktop-lg) {
-      padding: rem(20);
-    }
-
-    //  @include for-width(-mobile-l) {
-    //    width: 80%;
-    //  }
   }
 }

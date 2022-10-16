@@ -18,6 +18,7 @@
     }
 
     .nav__item {
+      font-size: 16px;
       margin: 0;
       margin-bottom: 30px;
     }
@@ -92,6 +93,14 @@
       }
     }
 
+    &:nth-child(odd) {
+      margin-right: rem(85);
+
+       @include for-width(-desktop-med) {
+         margin-right: rem(51);
+       }
+    }
+
     &:nth-child(4) {
       margin-right: auto;
     }
@@ -110,10 +119,6 @@
 
     @include for-width(-desktop-med) {
       margin-right: rem(31);
-    }
-
-    @include for-width(-desktop-med) {
-      margin-right: rem(20);
     }
   }
 
@@ -154,18 +159,36 @@
 
     &--dropdown {
       cursor: pointer;
+      position: relative;
 
       &::before {
         content: none;
       }
 
-      svg {
-        margin-left: 12px;
-        width: 10px;
-        height: 15px;
-        fill: currentColor;
-        object-fit: cover;
+      &::after {
+        --rotate: rotate(90deg);
+
+        content: "";
+        position: absolute;
+        right: -38%;
+        top: 50%;
+        mask-image: url("../img/sprite.svg#small-arrow");
+        mask-position: center;
+        mask-repeat: no-repeat;
+        mask-size: cover;
+        width: 12px;
+        height: 12px;
+        background-color: currentcolor;
+        transform: translateY(-50%) var(--rotate);
         transition: transform 0.3s linear;
+      }
+
+      &:hover {
+        &::after {
+          --rotate: rotate(-90deg);
+
+          transform: translateY(-50%) var(--rotate);
+        }
       }
 
       &:hover {

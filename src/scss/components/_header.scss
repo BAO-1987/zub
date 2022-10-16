@@ -16,7 +16,6 @@
     left: 0;
     right: 0;
     top: 50%;
-    margin: 0 auto;
     transform: translateY(-41%);
 
     @include for-width(-tablet) {

@@ -1,6 +1,5 @@
 import Swiper, {
   Navigation,
-  Pagination,
 } from 'swiper/bundle';
 
 const reviewsSlider = new Swiper(".reviews-slider", {
@@ -46,18 +45,18 @@ const newsSlider = new Swiper(".news-slider", {
 
   breakpoints: {
 
-    350: {
-      slidesPerView: 1.5,
-    },
-  
-   576: {
-      slidesPerView: 2,
-    },
+      350: {
+        slidesPerView: 1.5,
+      },
 
-    992: {
-      slidesPerView: 3,
-      spaceBetween: 15,
-    },
+     576: {
+        slidesPerView: 2,
+      },
+
+      992: {
+        slidesPerView: 3,
+        spaceBetween: 15,
+      },
 
     1600: {
       slidesPerView: 3,

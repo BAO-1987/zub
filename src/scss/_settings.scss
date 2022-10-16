@@ -66,86 +66,46 @@ h3 {
   @include h2;
 }
 
-// .card {
-//   @include flex-all-center;
+a:not([class]) {
 
-//   position: relative;
-//   z-index: 1;
-//   flex-direction: column;
-//   border: 1px solid var(--color-white);
-//   min-height: 240px;
-//   transition: border 0.3s linear;
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  padding-right: 30px;
+  transition: color 0.3s linear, background-color 0.3s linear;
 
-//   &::before {
-//     content: "";
-//     position: absolute;
-//     z-index: -1;
-//     width: 100%;
-//     height: 100%;
-//     background: linear-gradient(0deg, rgba(0, 0, 0, 0.83), rgba(0, 0, 0, 0.83));
-//     backdrop-filter: blur(1px);
-//   }
+  &::before {
+    content: "";
+    position: absolute;
+    right: 0;
+    mask-image: url("../img/sprite.svg#small-arrow");
+    mask-position: center;
+    mask-repeat: no-repeat;
+    mask-size: cover;
+    width: 16px;
+    height: 16px;
+    background-color: var(--color-white);
+    transition: background-color 0.3s linear;
 
-//   &-title {
-//     @include h2;
-//   }
+    @include for-width(-mobile-l) {
+      width: 14px;
+      height: 14px;
+    }
+  }
 
-//   &-text {
-//     @include adaptive_size("font-size", 16, 14);
+  &:hover {
+    color: var(--color-active);
 
-//     position: relative;
-//     display: inline-flex;
-//     align-items: center;
-//     padding-right: 30px;
-//     transition: color 0.3s linear, background-color 0.3s linear;
-
-//     &::before {
-//       content: "";
-//       position: absolute;
-//       right: 0;
-//       mask-image: url("../img/sprite.svg#small-arrow");
-//       mask-position: center;
-//       mask-repeat: no-repeat;
-//       mask-size: cover;
-//       width: 16px;
-//       height: 16px;
-//       background-color: var(--color-white);
-//       transition: background-color 0.3s linear;
-//     }
-//   }
-
-//   &-link {
-//     &::before {
-//       content: "";
-//       position: absolute;
-//       left: 0;
-//       right: 0;
-//       top: 0;
-//       bottom: 0;
-//       z-index: 25;
-//     }
-//   }
-
-//   &:hover {
-//     border: 1px solid var(--color-active);
-
-//     .card-title {
-//       color: var(--color-active);
-//     }
-
-//     .card-text {
-//       color: var(--color-active);
-//     }
-
-//     .card-text::before {
-//       background-color: var(--color-active);
-//     }
-//   }
-// }
+    &::before {
+      background-color: var(--color-active);
+    }
+  }
+}
 
 .logo {
   @include flex-all-center;
-
+  
+  margin: 0 auto;
   width: 100%;
   max-width: 107px;
 }
@@ -160,7 +120,8 @@ h3 {
   border: 1px solid transparent;
   padding: rem(17) rem(75) rem(17) rem(49);
   line-height: 1.6;
-  // max-width: fit-content;
+  max-width: fit-content;
+  white-space: nowrap;
   color: var(--color-white);
   background-color: var(--color-blue);
   transition-property: color, background-color, border;
@@ -168,7 +129,7 @@ h3 {
   transition-timing-function: linear;
 
   @include for-width(-desktop-med) {
-    padding: rem(15) rem(35) rem(15) rem(30);
+    padding: rem(15) rem(55) rem(15) rem(40);
   }
 
   &::before {
@@ -184,12 +145,9 @@ h3 {
     background-color: var(--color-white);
 
     @include for-width(-desktop-med) {
+      right: 0;
       width: 14px;
       height: 14px;
-    }
-
-    @include for-width(-desktop-med) {
-      right: 0;
     }
   }
 
@@ -206,21 +164,13 @@ h3 {
     background-color: var(--color-active);
   }
 
-  // @include for-width(-mobile-sl) {
-  //   padding: rem(17) rem(40) rem(17) rem(17);
-
-  //   &::before {
-  //     right: 15px;
-  //   }
-  // }
-
   &--second {
     border: 1px solid var(--color-white);
     padding: rem(17) rem(84) rem(17) rem(45);
     background-color: transparent;
 
     @include for-width(-desktop-med) {
-      padding: rem(15) rem(20) rem(15) rem(21);
+      padding: rem(15) rem(45) rem(15) rem(25);
     }
 
     &::before {
@@ -242,7 +192,7 @@ h3 {
         height: 20px;
       }
 
-      @include for-width(-desktop-med) {
+      @include for-width(-mobile-l) {
         width: 16px;
         height: 16px;
       }
@@ -263,7 +213,7 @@ h3 {
   }
 
   &--cursor {
-    padding: rem(19) rem(163) rem(18) rem(120);
+    padding: rem(17) rem(163) rem(17) rem(120);
 
     &::before {
       content: "";
@@ -277,14 +227,14 @@ h3 {
       height: 27px;
       background-color: var(--color-white);
 
-      // @include for-width(-tablet) {
-      //   right: 0;
-      // }
+      @include for-width(-tablet) {
+        right: 0;
+      }
     }
 
-    // @include for-width(-tablet) {
-    //   padding: rem(19) rem(60) rem(18) rem(60);
-    // }
+    @include for-width(-tablet) {
+      padding: rem(17) rem(60) rem(17) rem(60);
+    }
   }
 
   &--show-more {
@@ -372,10 +322,6 @@ h3 {
       }
     }
   }
-
-  // @include for-width(-mobile-sm) {
-  //   @include adaptive_size("font-size", 14, 12);
-  // }
 }
 
 .btn-reset {
@@ -412,7 +358,6 @@ h3 {
   }
 
   &--reverse {
-    // top: 55px;
     right: 60px;
 
     @include for-width(-mobile-l) {
@@ -492,10 +437,11 @@ h3 {
 
 .content {
   @include flex-all-center;
+  gap: rem(50);
 
   @include for-width(-mobile-sl) {
     flex-direction: column;
-    gap: 25px;
+    gap: rem(25);
   }
 }
 

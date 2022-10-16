@@ -1,13 +1,14 @@
 .gallery {
   position: relative;
 
-  .btn {
-    margin: 0 auto;
-  }
+  // .btn {
+  //   margin: 0 auto;
+  // }
 
   &::before {
     content: "";
     position: absolute;
+    z-index: -1;
     right: 5%;
     bottom: 6%;
     width: 138px;
@@ -24,9 +25,23 @@
 
   &__list {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    // grid-template-columns: repeat(4, 1fr);
     margin-bottom: rem(66);
+    // grid-template-columns: repeat(3, 1fr);
+    // grid-template-rows: repeat(6, 95px);
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-auto-flow: dense;
+    grid-auto-rows: 50px;
+
+    // grid-auto-flow: dense;
     gap: 10px;
+
+    @include for-width(-mobile-l) {
+      grid-template-columns: repeat(1, 1fr);
+      margin-bottom: rem(30);
+      gap: 10px;
+    }
+
 
     &--dentures {
       gap: 5px 10px;
@@ -39,10 +54,10 @@
       gap: 5px 10px;
     }
 
-    @include for-width(-tablet) {
-      grid-template-columns: repeat(2, 1fr);
-      gap: 20px;
-    }
+    // @include for-width(-mobile-l) {
+    //   grid-template-columns: repeat(2, 1fr);
+    //   gap: 20px;
+    // }
 
     @include for-width(-mobile-l) {
       grid-template-columns: repeat(1, 1fr);
@@ -52,30 +67,163 @@
   }
 
   &__item {
-    transform: scale(1);
+    @include flex-all-center;
+
+    position: relative;
     transition: transform 0.3s ease-in-out;
     cursor: pointer;
 
-    &:hover {
-      transform: scale(0.97);
+    &::before {
+      content: "";
+      position: absolute;
+      width: 100%;
+      // max-width: 270px;
+      height: 100%;
+      opacity: 0;
+      backdrop-filter: blur(10px);
+      background: rgba(0, 0, 0, 0.614);
+      pointer-events: none;
+      z-index: 2;
+      color: transparent;
+      transition: opacity 0.3s ease-in-out;
+      grid-column: auto / span 1;
     }
 
-    &:nth-child(n + 13) {
-      display: none;
+    &:hover {
+      transform: scale(1);
+
+      &::before {
+        opacity: 1;
+      }
+
+      span {
+        opacity: 1;
+      }
+    }
+
+    span {
+      position: absolute;
+      display: inline-block;
+      opacity: 0;
+      z-index: 2;
+      font-size: 20px;
+      text-transform: uppercase;
+      -webkit-text-stroke: 1px var(--color-white);
+      -webkit-text-fill-color: transparent;
+      pointer-events: none;
+      transition: opacity 0.3s ease-in-out;
     }
 
     &.is-visible {
       display: block;
     }
+
+    &:nth-child(1) {
+   grid-row: span 4;
+    }
+
+    &:nth-child(2) {
+      grid-row: span 2;
+    }
+
+    &:nth-child(3) {
+     grid-row: span 2;
+    }
+
+    &:nth-child(4) {
+      grid-row: span 4;
+    }
   }
+
+  // &__img {
+  //   width: 100%;
+  //   min-height: 250;
+  //   max-width: 270px;
+  // }
 
   &__more {
     margin: 0 auto;
-    width: 100%;
-    max-width: 350px;
-
-    @include for-width(-mobile-s) {
-      max-width: 300px;
-    }
   }
+}
+
+
+li [data-fancybox] img {
+  cursor: zoom-in;
+}
+
+.fancybox__backdrop::after {
+  content: "";
+  position: absolute;
+  width: 10%;
+  height: 10%;
+  filter: blur(2px);
+  left: 50%;
+  top: 50%;
+  transform: scale(11);
+  opacity: 0.3;
+  background-image: var(--bg-image);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.fancybox__container {
+  --fancybox-bg: #000;
+
+  --fancybox-thumbs-width: 48px;
+  --fancybox-thumbs-ratio: 1;
+
+  // --carousel-button-bg: rgb(91 78 76 / 74%);
+
+  --carousel-button-svg-width: 24px;
+  --carousel-button-svg-height: 24px;
+
+  --carousel-button-svg-stroke-width: 2.5;
+}
+
+.fancybox__nav {
+  --carousel-button-svg-width: 24px;
+  --carousel-button-svg-height: 24px;
+}
+
+.fancybox__nav .carousel__button.is-prev {
+  left: 20px;
+}
+
+.fancybox__nav .carousel__button.is-next {
+  right: 20px;
+}
+
+.carousel__button.is-close {
+  right: auto;
+  top: 20px;
+  left: 20px;
+}
+
+.fancybox__slide {
+  padding: 8px 88px;
+}
+
+/* Thumbnails */
+.fancybox__thumbs .carousel__slide {
+  padding: 8px 8px 16px 8px;
+}
+
+.is-nav-selected::after {
+  display: none;
+}
+
+.fancybox__thumb {
+  border-radius: 6px;
+  opacity: 0.4;
+}
+
+.fancybox__thumb:hover,
+.is-nav-selected .fancybox__thumb {
+  border-radius: 6px;
+  opacity: 1;
+}
+
+.is-nav-selected .fancybox__thumb::after {
+  display: none;
 }

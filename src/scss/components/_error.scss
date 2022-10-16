@@ -1,41 +1,12 @@
-.error {
-  padding-top: rem(50);
+.error-page {
+  padding: clamp(15px, 3.125rem, 50px) 0;
 
-  .nav__logo {
+  .logo {
     margin-bottom: rem(85);
   }
 
-  &__content {
-    @include flex-all-center;
-
-    margin: 0 auto rem(70);
-
-    @include for-width (-mobile-l) {
-      margin: 0 auto rem(40);
-    }
-  }
-
-  &__span {
-    @include adaptive_size("font-size", 300, 140);
-
-    display: inline-block;
-    font-weight: 900;
-    line-height: 1;
-  }
-
   &__img {
-    margin: 0 rem(81);
-    width: 228px;
-    height: 300px;
-    object-fit: cover;
-
-    @include for-width (-mobile-l) {
-      margin: 0 rem(40);
-    }
-
-    @include for-width (-mobile-sl) {
-      margin: 0 rem(20);
-    }
+    margin: 0 auto rem(70);
   }
 
   &__title {
@@ -45,13 +16,25 @@
     text-align: center;
   }
 
-  .content {
-    padding-bottom: rem(80);
-    gap: 50px;
+  &__btns {
+    @include flex-all-center;
+    gap: rem(50);
+
+    @include for-width(-mobile-l) {
+      gap: rem(15);
+    }
+
+    @include for-width(-mobile-sl) {
+     flex-direction: column;
+    }
   }
 
   .btn--cursor {
     border: 1px solid var(--color-white);
     background-color: transparent;
+
+    @include for-width(-mobile-l) {
+      padding: rem(15) rem(32) rem(15) rem(32);
+    }
   }
 }
