@@ -211,7 +211,7 @@ h3 {
       transition: background-color 0.3s linear;
 
       @include for-width(-desktop-med) {
-        right: 20px;
+        right: 15px;
         width: 20px;
         height: 20px;
       }
@@ -432,7 +432,7 @@ h3 {
   @include flex-all-center;
 
   position: fixed;
-  right: rem(40);
+  right: calc((100% - 1440px) / 2);
   bottom: rem(40);
   border: 1px solid var(--color-white);
   padding: rem(15) rem(30);
@@ -470,6 +470,10 @@ h3 {
     }
   }
 
+  @include for-width(-desktop-lg) {
+    right: rem(16);
+  }
+
   @include for-width(-tablet) {
     width: 54px;
     height: 34px;
@@ -477,8 +481,6 @@ h3 {
 }
 
 .text {
-  @include adaptive_size("font-size", 16, 14);
-
   margin: 0 auto;
   width: 100%;
   max-width: 685px;

@@ -7,6 +7,7 @@
 
   &__img {
     margin: 0 auto rem(70);
+    max-width: fit-content;
   }
 
   &__title {
@@ -25,7 +26,7 @@
     }
 
     @include for-width(-mobile-sl) {
-     flex-direction: column;
+      flex-direction: column;
     }
   }
 
@@ -35,6 +36,10 @@
 
     @include for-width(-mobile-l) {
       padding: rem(15) rem(32) rem(15) rem(32);
+
+      &::before {
+        right: 4px;
+      }
     }
   }
 }

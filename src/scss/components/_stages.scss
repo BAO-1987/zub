@@ -31,11 +31,11 @@
     counter-reset: li;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: rem(50);
+    gap: 50px;
 
     @include for-width(-desktop-lg) {
       text-align: center;
-      gap: rem(30);
+      gap: 30px;
     }
 
     @include for-width(-mobile-md) {
@@ -51,11 +51,12 @@
     li {
       position: relative;
       border: 1px solid var(--color-white);
-      padding: rem(30) rem(30) rem(35);
+      padding: clamp(20px, 1.95rem, 30px);
       letter-spacing: 0.038em;
       transition-property: box-shadow, border;
       transition-duration: 0.3s;
       transition-timing-function: linear;
+      cursor: pointer;
 
 
       &:last-child {
@@ -90,6 +91,8 @@
       }
 
       p {
+        @include flex-v-center;
+
         min-height: 80px;
       }
 
@@ -115,10 +118,8 @@
         box-shadow: 12px 12px 25px var(--color-active) inset;
       }
 
-
-
       @include for-width(-tablet) {
-        padding: rem(15);
+        padding: clamp(10px, 0.625rem, 15px);
       }
     }
 
@@ -162,11 +163,11 @@
     }
 
     &--cad {
-      gap: rem(70) rem(50);
+      // gap: rem(70) rem(50);
 
       @include for-width(-desktop-lg) {
         text-align: center;
-        gap: rem(30);
+        // gap: rem(30);
       }
 
       li {
