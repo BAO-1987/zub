@@ -207,6 +207,26 @@ h3::first-letter {
   max-width: 107px;
 }
 
+.scroll {
+  overflow: auto;
+  padding-right: 10px;
+  padding-bottom: 10px;
+  scrollbar-color: var(--color-active) var(--color-white);
+  scrollbar-width: thin;
+}
+.scroll::-webkit-scrollbar {
+  width: 4px;
+  height: 4px;
+}
+.scroll::-webkit-scrollbar-track {
+  border-radius: 10px;
+  background-color: var(--color-white);
+}
+.scroll::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-color: var(--color-active);
+}
+
 .btn {
   font-size: calc(14px + 2 * ((100vw - 320px) / 1600));
   display: -webkit-box;
@@ -1611,6 +1631,13 @@ h3::first-letter {
   opacity: 1;
   visibility: visible;
 }
+@media (max-width: calc(48em - 0.0625em)) {
+  .gallery__list {
+    -ms-grid-columns: (1fr)[2];
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+}
 .gallery__more {
   margin: 0 auto;
 }
@@ -2741,6 +2768,11 @@ li [data-fancybox] img {
     justify-content: space-between;
   }
 }
+@media (max-width: calc(48em - 0.0625em)) {
+  .tabs {
+    display: block;
+  }
+}
 .tabs__nav {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2755,6 +2787,31 @@ li [data-fancybox] img {
     -ms-flex-direction: column;
     flex-direction: column;
     gap: 5px;
+    margin: 0;
+    margin-right: 0.9375rem;
+    position: sticky;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    top: 60px;
+    width: 100%;
+    max-width: 250px;
+  }
+}
+@media (max-width: calc(48em - 0.0625em)) {
+  .tabs__nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: inherit;
+    -webkit-box-direction: inherit;
+    -ms-flex-direction: inherit;
+    flex-direction: inherit;
+    margin: 0;
+    max-width: none;
+    margin-bottom: 15px;
+    top: 0;
+    gap: 10px;
   }
 }
 .tabs__nav-btn {
@@ -2772,6 +2829,12 @@ li [data-fancybox] img {
 @media (max-width: calc(90em - 0.0625em)) {
   .tabs__nav-btn {
     padding: 1.125rem 1.5625rem;
+  }
+}
+@media (max-width: calc(75em - 0.0625em)) {
+  .tabs__nav-btn {
+    width: 100%;
+    padding: 0.625rem;
   }
 }
 .tabs__nav-btn--active {

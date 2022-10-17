@@ -5,6 +5,10 @@
     @include flex-sb;
   }
 
+  @include for-width(-mobile-l) {
+    display: block;
+  }
+
   &__nav {
     @include flex;
 
@@ -14,6 +18,23 @@
     @include for-width(-desktop-med) {
       flex-direction: column;
       gap: 5px;
+      margin: 0;
+      margin-right: rem(15);
+      position: sticky;
+      height: fit-content;
+      top: 60px;
+      width: 100%;
+      max-width: 250px;
+    }
+
+    @include for-width(-mobile-l) {
+      display: flex;
+      flex-direction: inherit;
+      margin: 0;
+      max-width: none;
+      margin-bottom: 15px;
+      top: 0;
+      gap: 10px;
     }
   }
 
@@ -30,6 +51,11 @@
 
     @include for-width(-desktop-lg) {
       padding: rem(18) rem(25);
+    }
+
+    @include for-width(-desktop-med) {
+      width: 100%;
+      padding: rem(10);
     }
 
     &--active {
