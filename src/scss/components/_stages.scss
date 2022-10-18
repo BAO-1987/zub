@@ -33,6 +33,83 @@
     grid-template-columns: repeat(3, 1fr);
     gap: rem(50);
 
+    li {
+      position: relative;
+      border: 1px solid var(--color-white);
+      padding: clamp(20px, 1.95rem, 30px);
+      letter-spacing: 0.038em;
+      transition-property: box-shadow, border;
+      transition-duration: 0.3s;
+      transition-timing-function: linear;
+      cursor: pointer;
+
+      &::before {
+        @include adaptive_size("font-size", 100, 30);
+
+        counter-increment: li;
+        content: counter(li, decimal-leading-zero);
+        width: 100%;
+        font-weight: 900;
+        line-height: 1;
+        letter-spacing: 0.07em;
+        text-transform: uppercase;
+        color: var(--color-blue);
+
+        @include for-width(+ desktop-xl) {
+          font-size: 100px;
+        }
+      }
+
+      &:last-child {
+        @include for-width(-mobile-md) {
+          grid-column: 2 span;
+        }
+
+        @include for-width(-mobile-s) {
+          grid-column: auto;
+        }
+      }
+
+      span {
+        @include adaptive_size("font-size", 80, 25);
+
+        display: inline-block;
+        margin-bottom: rem(33);
+        padding-left: 3px;
+        font-weight: 900;
+        line-height: 1;
+        letter-spacing: 0.07em;
+        text-transform: uppercase;
+        color: var(--color-blue);
+
+        @include for-width(+ desktop-xl) {
+          font-size: 80px;
+        }
+
+        @include for-width(-mobile-md) {
+          margin-bottom: rem(20);
+        }
+      }
+
+      a {
+        text-decoration: underline;
+        transition: color 0.3s linear;
+
+        &:hover {
+          color: var(--color-active);
+        }
+      }
+
+      &:hover {
+        border: 1px solid var(--color-active);
+        box-shadow: 12px 12px 25px var(--color-active) inset;
+      }
+
+      @include for-width(-desktop-s) {
+        padding: clamp(10px, 0.6rem, 15px);
+      }
+    }
+
     @include for-width(-desktop-lg) {
       text-align: center;
       gap: rem(30);
@@ -46,95 +123,6 @@
 
     @include for-width(-mobile-s) {
       grid-template-columns: repeat(1, 1fr);
-    }
-
-    li {
-      position: relative;
-      border: 1px solid var(--color-white);
-      padding: clamp(20px, 1.95rem, 30px);
-      letter-spacing: 0.038em;
-      transition-property: box-shadow, border;
-      transition-duration: 0.3s;
-      transition-timing-function: linear;
-      cursor: pointer;
-
-      @include for-width(-desktop-s) {
-        padding: 10px;
-      }
-
-
-      &:last-child {
-        @include for-width(-mobile-md) {
-          grid-column: 2 span;
-        }
-
-        @include for-width(-mobile-s) {
-          grid-column: auto;
-        }
-      }
-
-      span {
-        @include adaptive_size("font-size", 80, 35);
-
-        display: inline-block;
-        margin-bottom: rem(33);
-        padding-left: 3px;
-        font-weight: 900;
-        line-height: 1;
-        letter-spacing: 0.07em;
-        text-transform: uppercase;
-        color: var(--color-blue);
-
-        @include for-width(+desktop-xl) {
-          font-size: 80px;
-        }
-
-        @include for-width(-mobile-md) {
-          margin-bottom: rem(20);
-        }
-      }
-
-      p {
-        // @include flex-v-center;
-
-        min-height: 80px;
-      }
-
-      a {
-        text-decoration: underline;
-        transition: color 0.3s linear;
-
-        &:hover {
-          color: var(--color-active);
-        }
-      }
-
-      &::before {
-        white-space: nowrap;
-        @include adaptive_size("font-size", 100, 40);
-
-        counter-increment: li;
-        content: counter(li, decimal-leading-zero);
-        width: 100%;
-        font-weight: 900;
-        line-height: 1;
-        letter-spacing: 0.07em;
-        text-transform: uppercase;
-        color: var(--color-blue);
-
-        @include for-width(+desktop-xl) {
-          font-size: 100px;
-        }
-      }
-
-      &:hover {
-        border: 1px solid var(--color-active);
-        box-shadow: 12px 12px 25px var(--color-active) inset;
-      }
-
-      @include for-width(-tablet) {
-        padding: clamp(10px, 0.625rem, 15px);
-      }
     }
 
     &--implantation {
@@ -152,10 +140,6 @@
           }
         }
 
-        //  span {
-        //    padding-left: 15px;
-        //  }
-
         @include for-width(-tablet) {
           padding: 15px;
 
@@ -167,20 +151,6 @@
         @include for-width(-mobile-sl) {
           padding: 10px;
         }
-
-        // // @include for-width(-tablet) {
-        // //   padding: 20px 42px;
-
-        // //   &:last-child {
-        // //     grid-column: auto;
-        // //   }
-
-        // }
-
-        // @include for-width(-tablet) {
-        //   padding: 15px;
-        // }
-
       }
 
       @include for-width(-mobile-s) {
@@ -189,14 +159,16 @@
     }
 
     &--cad {
-      // gap: rem(70) rem(50);
-
       @include for-width(-desktop-lg) {
         text-align: center;
-        // gap: rem(30);
       }
 
       li {
+        p {
+          @include flex-all-center;
+          min-height: 80px;
+        }
+
         &:last-child {
           @include for-width(-tablet) {
             grid-column: auto;

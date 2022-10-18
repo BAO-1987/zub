@@ -1,6 +1,6 @@
 import './components/_dropdown'
 import './components/_slider'
-import './components/_anime'
+import './components/_animation'
 import './components/_tabs'
 import './components/_digits'
 import './components/_show-more'

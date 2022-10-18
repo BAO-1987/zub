@@ -3,6 +3,7 @@
 
   &__content {
     @include flex;
+    
     gap: rem(70);
 
     @include for-width(-tablet) {
