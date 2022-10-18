@@ -31,11 +31,11 @@
     counter-reset: li;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 50px;
+    gap: rem(50);
 
     @include for-width(-desktop-lg) {
       text-align: center;
-      gap: 30px;
+      gap: rem(30);
     }
 
     @include for-width(-mobile-md) {
@@ -57,6 +57,10 @@
       transition-duration: 0.3s;
       transition-timing-function: linear;
       cursor: pointer;
+
+      @include for-width(-desktop-s) {
+        padding: 10px;
+      }
 
 
       &:last-child {
@@ -91,12 +95,22 @@
       }
 
       p {
-        @include flex-v-center;
+        // @include flex-v-center;
 
         min-height: 80px;
       }
 
+      a {
+        text-decoration: underline;
+        transition: color 0.3s linear;
+
+        &:hover {
+          color: var(--color-active);
+        }
+      }
+
       &::before {
+        white-space: nowrap;
         @include adaptive_size("font-size", 100, 40);
 
         counter-increment: li;
@@ -127,7 +141,7 @@
       grid-template-columns: repeat(2, 1fr);
 
       li {
-        padding: 28px 52px;
+        padding: rem(28) rem(52);
         letter-spacing: 0.06em;
 
         h3 {
@@ -136,25 +150,37 @@
           @include for-width(-desktop-lg) {
             text-align: center;
           }
-
-          span {
-            padding-left: 15px;
-          }
-
         }
 
+        //  span {
+        //    padding-left: 15px;
+        //  }
+
         @include for-width(-tablet) {
-          padding: 20px 42px;
+          padding: 15px;
 
           &:last-child {
             grid-column: auto;
           }
-
         }
 
-        @include for-width(-tablet) {
-          padding: rem(15);
+        @include for-width(-mobile-sl) {
+          padding: 10px;
         }
+
+        // // @include for-width(-tablet) {
+        // //   padding: 20px 42px;
+
+        // //   &:last-child {
+        // //     grid-column: auto;
+        // //   }
+
+        // }
+
+        // @include for-width(-tablet) {
+        //   padding: 15px;
+        // }
+
       }
 
       @include for-width(-mobile-s) {

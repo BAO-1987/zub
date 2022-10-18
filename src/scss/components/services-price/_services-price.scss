@@ -1,6 +1,6 @@
 .price {
   position: relative;
-  margin-bottom: rem(100);
+  margin-bottom: clamp(15px, 3.125rem, 50px);
 
   &::before {
     content: "";
@@ -30,8 +30,4 @@
     margin-bottom: rem(50);
   }
 
-
-  @include for-width (-mobile-l) {
-    margin-bottom: rem(50);
-  }
 }

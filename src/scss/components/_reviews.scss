@@ -35,7 +35,6 @@
 
     position: relative;
     padding-top: rem(105);
-    height: 100%;
     width: 100%;
     max-width: 704px;
 
@@ -60,6 +59,10 @@
 
     @include for-width(-desktop-s) {
       padding-top: rem(25);
+    }
+
+    @include for-width(-mobile-sl) {
+      height: 100%;
     }
   }
 

@@ -208,27 +208,34 @@ h3::first-letter {
 }
 
 .scroll {
-  overflow: auto;
-  padding-right: 10px;
-  padding-bottom: 10px;
-  scrollbar-color: var(--color-active) var(--color-white);
-  scrollbar-width: thin;
+  display: none;
 }
-.scroll::-webkit-scrollbar {
-  width: 4px;
-  height: 4px;
-}
-.scroll::-webkit-scrollbar-track {
-  border-radius: 10px;
-  background-color: var(--color-white);
-}
-.scroll::-webkit-scrollbar-thumb {
-  border-radius: 10px;
-  background-color: var(--color-active);
+@media (max-width: calc(48em - 0.0625em)) {
+  .scroll {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    overflow: auto;
+    padding-right: 10px;
+    padding-bottom: 10px;
+    scrollbar-color: var(--color-active) var(--color-white);
+    scrollbar-width: thin;
+  }
+  .scroll::-webkit-scrollbar {
+    width: 4px;
+    height: 4px;
+  }
+  .scroll::-webkit-scrollbar-track {
+    border-radius: 10px;
+    background-color: var(--color-white);
+  }
+  .scroll::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background-color: var(--color-active);
+  }
 }
 
 .btn {
-  font-size: calc(14px + 2 * ((100vw - 320px) / 1600));
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1549,7 +1556,7 @@ h3::first-letter {
 
 .price {
   position: relative;
-  margin-bottom: 6.25rem;
+  margin-bottom: clamp(15px, 3.125rem, 50px);
 }
 .price::before {
   content: "";
@@ -1576,11 +1583,6 @@ h3::first-letter {
 }
 .price .text {
   margin-bottom: 3.125rem;
-}
-@media (max-width: calc(48em - 0.0625em)) {
-  .price {
-    margin-bottom: 3.125rem;
-  }
 }
 
 .gallery {
@@ -2168,12 +2170,12 @@ li [data-fancybox] img {
   display: grid;
   -ms-grid-columns: (1fr)[3];
   grid-template-columns: repeat(3, 1fr);
-  gap: 50px;
+  gap: 3.125rem;
 }
 @media (max-width: calc(90em - 0.0625em)) {
   .stages__list {
     text-align: center;
-    gap: 30px;
+    gap: 1.875rem;
   }
 }
 @media (max-width: calc(36em - 0.0625em)) {
@@ -2209,6 +2211,11 @@ li [data-fancybox] img {
   transition-timing-function: linear;
   cursor: pointer;
 }
+@media (max-width: calc(68.75em - 0.0625em)) {
+  .stages__list li {
+    padding: 10px;
+  }
+}
 @media (max-width: calc(36em - 0.0625em)) {
   .stages__list li:last-child {
     -ms-grid-column-span: 2;
@@ -2242,15 +2249,19 @@ li [data-fancybox] img {
   }
 }
 .stages__list li p {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
   min-height: 80px;
 }
+.stages__list li a {
+  text-decoration: underline;
+  -webkit-transition: color 0.3s linear;
+  -o-transition: color 0.3s linear;
+  transition: color 0.3s linear;
+}
+.stages__list li a:hover {
+  color: var(--color-active);
+}
 .stages__list li::before {
+  white-space: nowrap;
   font-size: calc(40px + 60 * ((100vw - 320px) / 1600));
   counter-increment: li;
   content: counter(li, decimal-leading-zero);
@@ -2281,7 +2292,7 @@ li [data-fancybox] img {
   grid-template-columns: repeat(2, 1fr);
 }
 .stages__list--implantation li {
-  padding: 28px 52px;
+  padding: 1.75rem 3.25rem;
   letter-spacing: 0.06em;
 }
 .stages__list--implantation li h3 {
@@ -2292,20 +2303,17 @@ li [data-fancybox] img {
     text-align: center;
   }
 }
-.stages__list--implantation li h3 span {
-  padding-left: 15px;
-}
 @media (max-width: calc(62em - 0.0625em)) {
   .stages__list--implantation li {
-    padding: 20px 42px;
+    padding: 15px;
   }
   .stages__list--implantation li:last-child {
     grid-column: auto;
   }
 }
-@media (max-width: calc(62em - 0.0625em)) {
+@media (max-width: calc(29.75em - 0.0625em)) {
   .stages__list--implantation li {
-    padding: 0.9375rem;
+    padding: 10px;
   }
 }
 @media (max-width: calc(23.5em - 0.0625em)) {
@@ -2510,7 +2518,6 @@ li [data-fancybox] img {
   flex-direction: column;
   position: relative;
   padding-top: 6.5625rem;
-  height: 100%;
   width: 100%;
   max-width: 704px;
 }
@@ -2540,6 +2547,11 @@ li [data-fancybox] img {
 @media (max-width: calc(68.75em - 0.0625em)) {
   .reviews-slider__inner {
     padding-top: 1.5625rem;
+  }
+}
+@media (max-width: calc(29.75em - 0.0625em)) {
+  .reviews-slider__inner {
+    height: 100%;
   }
 }
 .reviews-slider__blockquote {

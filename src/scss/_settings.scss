@@ -110,32 +110,36 @@ h3 {
 }
 
 .scroll {
-  overflow: auto;
-  padding-right: 10px;
-  padding-bottom: 10px;
-  scrollbar-color: var(--color-active) var(--color-white);
-  scrollbar-width: thin;
+  display: none;
 
-  &::-webkit-scrollbar {
-    width: 4px;
-    height: 4px;
-  }
+  @include for-width(-mobile-l) {
+    display: flex;
+    overflow: auto;
+    padding-right: 10px;
+    padding-bottom: 10px;
+    scrollbar-color: var(--color-active) var(--color-white);
+    scrollbar-width: thin;
 
-  &::-webkit-scrollbar-track {
-    -webkit-border-radius: 10px;
-    border-radius: 10px;
-    background-color: var(--color-white);
-  }
+    &::-webkit-scrollbar {
+      width: 4px;
+      height: 4px;
+    }
 
-  &::-webkit-scrollbar-thumb {
-    -webkit-border-radius: 10px;
-    border-radius: 10px;
-    background-color: var(--color-active);
+    &::-webkit-scrollbar-track {
+      -webkit-border-radius: 10px;
+      border-radius: 10px;
+      background-color: var(--color-white);
+    }
+
+    &::-webkit-scrollbar-thumb {
+      -webkit-border-radius: 10px;
+      border-radius: 10px;
+      background-color: var(--color-active);
+    }
   }
 }
 
 .btn {
-  @include adaptive_size("font-size", 16, 14);
   @include flex-all-center;
 
   position: relative;
