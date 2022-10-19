@@ -58,33 +58,29 @@
       padding: rem(10);
     }
 
-    &--active {
-      background-color: var(--color-active);
+   @include for-width(-mobile-l) {
+      font-size: 12px;
+      }
 
-      &:focus {
+      &--active {
         background-color: var(--color-active);
+
+        &:focus {
+          background-color: var(--color-active);
+        }
+      }
+    }
+
+
+    &__panel {
+      display: none;
+      opacity: 0;
+      visibility: hidden;
+
+      &--active {
+        display: block;
+        opacity: 1;
+        visibility: visible;
       }
     }
   }
-
-  @include for-width(-desktop-med) {
-    grid-template-columns: repeat(3, auto);
-    padding: rem(15);
-  }
-
-  @include for-width(-mobile-l) {
-    grid-template-columns: repeat(1, 1fr);
-  }
-
-  &__panel {
-    display: none;
-    opacity: 0;
-    visibility: hidden;
-
-    &--active {
-      display: block;
-      opacity: 1;
-      visibility: visible;
-    }
-  }
-}

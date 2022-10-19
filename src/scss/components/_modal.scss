@@ -9,24 +9,21 @@
   &__container {
     padding: rem(70) rem(200);
     background-color: var(--color-black);
+    text-align: center;
 
     @include for-width(-mobile-l) {
       padding: rem(50);
     }
 
-    @include for-width(-mobile-l) {
-      padding: rem(20);
-    }
-
     &--chats {
-      max-width: 500px;
-      width: 100%;
       padding: rem(70) rem(100);
+      width: 100%;
+      max-width: 500px;
     }
   }
 
   &__title {
-    @include h2;
+    @include h1;
 
     margin: 0 auto rem(40);
     width: 100%;
@@ -36,8 +33,22 @@
   &__close {
     right: 4%;
     top: 4%;
+    mask-image: url("../img/sprite.svg#close");
+    mask-position: center;
+    mask-repeat: no-repeat;
+    mask-size: cover;
     width: 25px;
     height: 25px;
-    background-image: url("../img/sprite.svg#close");
+    background-color: var(--color-white);
+    transition: background-color 0.3s linear;
+
+    &:hover {
+      background-color: var(--color-blue);
+    }
+
+    @include for-width(-tablet) {
+      width: 20px;
+      height: 20px;
+    }
   }
 }

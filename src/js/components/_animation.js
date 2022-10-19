@@ -3,6 +3,7 @@ ScrollReveal({
   reset: true,
 });
 
+
 ScrollReveal().reveal(".hero__title", {
   duration: 1000,
   distance: "20px",
@@ -10,7 +11,7 @@ ScrollReveal().reveal(".hero__title", {
   delay: "200",
   origin: "top",
 });
-
+ 
 ScrollReveal().reveal(".text", {
   duration: 1200,
   distance: "20px",
@@ -30,7 +31,7 @@ ScrollReveal().reveal(
 );
 
 ScrollReveal().reveal(
-  ".gallery__list> *", {
+  ".gallery__list> li", {
     duration: 500,
     distance: "10%",
     easing: "ease",
@@ -38,21 +39,21 @@ ScrollReveal().reveal(
     origin: "top",
     interval: 450,
     opacity: 0,
-    viewFactor: 0,
   }
 );
 
-// ScrollReveal().reveal(
-//   ".tabs__panel--active> gallery__list> * ", {
-//     duration: 500,
-//     distance: "10%",
-//     easing: "ease",
-//     delay: "100",
-//     origin: "top",
-//     interval: 450,
-//     opacity: 1,
-//   }
-// );
+ScrollReveal().reveal(
+  ".gallery__list--main> li ", {
+    duration: 500,
+    distance: "10%",
+    easing: "ease",
+    delay: "100",
+    origin: "left",
+    interval: 450,
+    opacity: 1,
+  }
+);
+
 
 ScrollReveal().reveal(
   ".services__more, .news__more, .reviews__more, .gallery__more, .slider-btn, .btn--second", {
@@ -71,7 +72,7 @@ ScrollReveal().reveal(
     easing: "ease",
     delay: "800",
     origin: "bottom",
-    mobile: false,
+    // mobile: false,
   }
 );
 
@@ -83,13 +84,15 @@ ScrollReveal().reveal(".contacts__inner, .pagination", {
   origin: "top",
 });
 
-ScrollReveal().reveal(".tabs__nav> li", {
+ScrollReveal().reveal(".tabs__nav> li> *", {
   duration: 500,
   distance: "10%",
   easing: "ease",
   delay: "100",
   origin: "left",
   interval: 200,
+  opacity: 1,
+  mobile: false,
 });
 
 
