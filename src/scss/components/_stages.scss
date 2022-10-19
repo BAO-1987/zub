@@ -44,7 +44,7 @@
       cursor: pointer;
 
       &::before {
-        @include adaptive_size("font-size", 100, 30);
+        @include adaptive_size("font-size", 100, 20);
 
         counter-increment: li;
         content: counter(li, decimal-leading-zero);
@@ -60,6 +60,7 @@
         }
       }
 
+
       &:last-child {
         @include for-width(-mobile-md) {
           grid-column: 2 span;
@@ -71,7 +72,7 @@
       }
 
       span {
-        @include adaptive_size("font-size", 80, 25);
+        @include adaptive_size("font-size", 80, 20);
 
         display: inline-block;
         margin-bottom: rem(33);
@@ -86,7 +87,7 @@
           font-size: 80px;
         }
 
-        @include for-width(-mobile-md) {
+        @include for-width(-mobile-l) {
           margin-bottom: rem(20);
         }
       }
@@ -138,10 +139,18 @@
           @include for-width(-desktop-lg) {
             text-align: center;
           }
+
+          @include for-width(-mobile-l) {
+            @include flex-all-center;
+
+            margin-bottom: rem(20);
+            min-height: rem(50);
+
+          }
         }
 
         @include for-width(-tablet) {
-          padding: 15px;
+          padding: 10px;
 
           &:last-child {
             grid-column: auto;

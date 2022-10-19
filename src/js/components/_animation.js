@@ -1,13 +1,7 @@
 import ScrollReveal from "scrollreveal";
-
-// ScrollReveal().reveal('.header', {
-//   duration: 1000,
-//   distance: "10%",
-//   easing: "ease",
-//   delay: "800",
-//   origin: "top",
-//   // reset: true,
-// });
+ScrollReveal({
+  reset: true,
+});
 
 ScrollReveal().reveal(".hero__title", {
   duration: 1000,
@@ -15,7 +9,6 @@ ScrollReveal().reveal(".hero__title", {
   easing: "ease",
   delay: "200",
   origin: "top",
-  reset: true,
 });
 
 ScrollReveal().reveal(".text", {
@@ -24,7 +17,6 @@ ScrollReveal().reveal(".text", {
   easing: "ease",
   delay: "100",
   origin: "top",
-  reset: true,
 });
 
 ScrollReveal().reveal(
@@ -34,7 +26,6 @@ ScrollReveal().reveal(
     easing: "ease",
     delay: "700",
     origin: "top",
-    reset: true,
   }
 );
 
@@ -46,19 +37,20 @@ ScrollReveal().reveal(
     delay: "100",
     origin: "top",
     interval: 450,
-    reset: true,
+    opacity: 0,
+    viewFactor: 0,
   }
 );
 
 // ScrollReveal().reveal(
-//   ".news-slider__list> *", {
+//   ".tabs__panel--active> gallery__list> * ", {
 //     duration: 500,
 //     distance: "10%",
 //     easing: "ease",
 //     delay: "100",
 //     origin: "top",
 //     interval: 450,
-//     reset: true,
+//     opacity: 1,
 //   }
 // );
 
@@ -69,7 +61,6 @@ ScrollReveal().reveal(
     easing: "ease",
     delay: "500",
     origin: "top",
-    reset: true,
   }
 );
 
@@ -80,7 +71,7 @@ ScrollReveal().reveal(
     easing: "ease",
     delay: "800",
     origin: "bottom",
-    reset: true,
+    mobile: false,
   }
 );
 
@@ -90,27 +81,19 @@ ScrollReveal().reveal(".contacts__inner, .pagination", {
   easing: "ease",
   delay: "500",
   origin: "bottom",
-  reset: true,
 });
 
-ScrollReveal().reveal(".tabs__nav> *", {
+ScrollReveal().reveal(".tabs__nav> li", {
   duration: 500,
   distance: "10%",
   easing: "ease",
   delay: "100",
   origin: "left",
   interval: 200,
-  reset: true,
+  // cleanup: true,
 });
 
-// ScrollReveal().reveal('.contacts__inner, .pagination', {
-//   duration: 700,
-//   distance: "10%",
-//   easing: "ease",
-//   delay: "500",
-//   origin: "bottom",
-//   reset: true,
-// });
+
 
 ScrollReveal().reveal(".footer", {
   duration: 800,
@@ -118,7 +101,6 @@ ScrollReveal().reveal(".footer", {
   easing: "ease",
   delay: "500",
   origin: "bottom",
-  reset: true,
 });
 
 ScrollReveal().reveal(".title", {
@@ -127,7 +109,6 @@ ScrollReveal().reveal(".title", {
   easing: "ease",
   delay: "100",
   origin: "top",
-  reset: true,
 });
 
 ScrollReveal().reveal(".dentures__title., title--second", {
@@ -136,7 +117,6 @@ ScrollReveal().reveal(".dentures__title., title--second", {
   easing: "ease",
   delay: "150",
   origin: "top",
-  reset: true,
 });
 
 ScrollReveal().reveal(
@@ -146,22 +126,5 @@ ScrollReveal().reveal(
     easing: "ease",
     delay: "100",
     origin: "top",
-    reset: true,
   }
 );
-
-// ScrollReveal().reveal('.title', {
-//   reset: true,
-//   duration: 900,
-//   origin: 'bottom',
-//   distance: '20px',
-//   easing: "ease-out",
-// });
-
-// ScrollReveal().reveal('.stages__list, .implantation__box, .content+, .text+, .advantages__list, .services__list, .cad-cam__box, .dentures__list, .services__list, .gallery, .reviews-slider, .news__list, .address, .contacts-form, .profit__content, .maps', {
-//   reset: true,
-//   duration: 700,
-//   origin: 'bottom',
-//   distance: '40px',
-//   easing: "ease-out",
-// });
