@@ -2,7 +2,7 @@
   min-height: 100vh;
   font-family: var(--font-family);
   font-weight: 500;
-  font-feature-settings: "pnum" on, "lnum" on;
+  font-feature-settings: "pnum"on, "lnum"on;
   @include adaptive_size("font-size", 16, 14);
   line-height: 1.6;
   letter-spacing: 0.06em;
@@ -480,6 +480,64 @@ h3 {
   @include for-width(-tablet) {
     width: 54px;
     height: 34px;
+  }
+
+  &__list {
+    @include flex-all-center;
+  }
+
+  &__item {
+    &:not(:last-child) {
+      margin-right: rem(70);
+    }
+  }
+
+  &__link {
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      right: 0;
+      mask-image: url("../img/sprite.svg#viber");
+      mask-position: center;
+      mask-repeat: no-repeat;
+      mask-size: cover;
+      width: 35px;
+      height: 35px;
+      background-color: var(--color-white);
+      transition: background-color 0.3s linear;
+    }
+
+    &--viber {
+      &::before {
+        mask-image: url("../img/sprite.svg#viber");
+      }
+    }
+
+    &--telegram {
+      &::before {
+        mask-image: url("../img/sprite.svg#telegram");
+      }
+    }
+
+    &--whatsapp {
+      &::before {
+        mask-image: url("../img/sprite.svg#whatsapp");
+      }
+    }
+
+    &:hover {
+      &::before {
+        background-color: var(--color-blue);
+      }
+    }
+
+    &:active {
+      &::before {
+        background-color: var(--color-active);
+      }
+    }
   }
 }
 

@@ -1,7 +1,7 @@
 <div class="graph-modal">
 
   <div class="graph-modal__container" role="dialog" aria-modal="true" data-graph-target="callback">
-    <button class="btn-reset js-modal-close graph-modal__close" aria-label="Закрыть модальное окно"></button>
+    <button class="btn-reset js-modal-close graph-modal__close" aria-label="Закрити модальне вікно"></button>
     <div class="graph-modal__content">
       <h2 class="graph-modal__title">Замовити консультацію</h2>
 
@@ -18,7 +18,7 @@
         </div>
 
         <label class="form__check custom-checkbox">
-          <input class="custom-checkbox__field" name="check"  type="checkbox">
+          <input class="custom-checkbox__field" name="check" type="checkbox">
           <span class="custom-checkbox__content">Натискаючи кнопку я погоджуюся з правилами конфіденційності</span>
         </label>
 
@@ -29,35 +29,29 @@
     </div>
   </div>
 
-    <div class="graph-modal__container" role="dialog" aria-modal="true" data-graph-target="callback">
-      <button class="btn-reset js-modal-close graph-modal__close" aria-label="Закрыть модальное окно"></button>
-      <div class="graph-modal__content">
-        <h2 class="graph-modal__title">Замовити консультацію</h2>
+  <div class="graph-modal__container graph-modal__container--chats" role="dialog" aria-modal="true" data-graph-target="chats">
+    <button class="btn-reset js-modal-close graph-modal__close" aria-label="Закрити модальне вікно"></button>
+    <div class="graph-modal__content">
+      <h2 class="graph-modal__title">Напиши нам</h2>
 
-        <form class="form" action="#" autocomplete="off" method="get">
+      <ul class="chats__list">
 
-          <div class="form__box">
-            <input class="form__input" type="text" id="name">
-            <label class="form__label" for="name">Ваше ім'я</label>
-          </div>
+        <li class="chats__item">
+          <a class="chats__link chats__link--viber" href="#" target="_blank" aria-label="Наш номер viber"></a>
+        </li>
 
-          <div class="form__box">
-            <input class="form__input" type="tel" id="phone">
-            <label class="form__label" for="phone">Ваш телефон</label>
-          </div>
+        <li class="chats__item">
+          <a class="chats__link chats__link--telegram" href="#" target="_blank" aria-label="Наш номер telegram"></a>
+        </li>
 
-          <label class="form__check custom-checkbox">
-            <input class="custom-checkbox__field" name="check" type="checkbox">
-            <span class="custom-checkbox__content">Натискаючи кнопку я погоджуюся з правилами конфіденційності</span>
-          </label>
+        <li class="chats__item">
+          <a class="chats__link chats__link--whatsapp" href="#" target="_blank" aria-label="Наш номер whatsapp"></a>
+        </li>
 
-          <button class="btn btn--cursor" type="submit">Замовити консультацію</button>
+      </ul>
 
-        </form>
 
-      </div>
     </div>
+  </div>
 
 </div>
-
-

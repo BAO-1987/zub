@@ -20,7 +20,7 @@ ScrollReveal().reveal(".text", {
 });
 
 ScrollReveal().reveal(
-  ".content, .reviews-slider, .news__item, .news-slider, .cad-cam__box", {
+  ".content, .reviews-slider, .news__item, .news-slider, .cad-cam__box, .implantation__box", {
     duration: 700,
     distance: "10%",
     easing: "ease",
@@ -80,7 +80,7 @@ ScrollReveal().reveal(".contacts__inner, .pagination", {
   distance: "10%",
   easing: "ease",
   delay: "500",
-  origin: "bottom",
+  origin: "top",
 });
 
 ScrollReveal().reveal(".tabs__nav> li", {
@@ -90,7 +90,6 @@ ScrollReveal().reveal(".tabs__nav> li", {
   delay: "100",
   origin: "left",
   interval: 200,
-  // cleanup: true,
 });
 
 

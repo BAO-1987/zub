@@ -17,10 +17,16 @@
     @include for-width(-mobile-l) {
       padding: rem(20);
     }
+
+    &--chats {
+      max-width: 500px;
+      width: 100%;
+      padding: rem(70) rem(100);
+    }
   }
 
   &__title {
-    @include h1;
+    @include h2;
 
     margin: 0 auto rem(40);
     width: 100%;
