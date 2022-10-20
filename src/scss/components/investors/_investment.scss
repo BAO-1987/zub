@@ -16,12 +16,14 @@
     }
   }
 
-  &__item {
+li {
     border: 1px solid var(--color-white);
     padding: rem(100) rem(30);
 
-    .card-title {
-      margin: 0;
+    h3 {
+      @include flex-all-center;
+
+      min-height: 90px;
     }
   }
 }

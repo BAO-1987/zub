@@ -1,6 +1,8 @@
-.price {
+.services-price {
+  @include flex-cc;
+
   position: relative;
-  margin-bottom: clamp(15px, 3.125rem, 50px);
+  height: 50vh;
 
   &::before {
     content: "";
