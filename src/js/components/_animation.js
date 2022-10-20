@@ -11,7 +11,7 @@ ScrollReveal().reveal(".hero__title", {
   delay: "200",
   origin: "top",
 });
- 
+
 ScrollReveal().reveal(".text", {
   duration: 1200,
   distance: "20px",
@@ -42,17 +42,29 @@ ScrollReveal().reveal(
   }
 );
 
-ScrollReveal().reveal(
-  ".gallery__list--main> li ", {
-    duration: 500,
-    distance: "10%",
-    easing: "ease",
-    delay: "100",
-    origin: "left",
-    interval: 450,
-    opacity: 1,
-  }
-);
+// ScrollReveal().reveal(
+//   ".gallery-main__list> li", {
+//     duration: 500,
+//     distance: "10%",
+//     easing: "ease",
+//     delay: "100",
+//     origin: "left",
+//     interval: 450,
+//     opacity: 1,
+//   }
+// );
+
+// ScrollReveal().reveal(
+//   ".gallery__list--main> li ", {
+//     duration: 500,
+//     distance: "10%",
+//     easing: "ease",
+//     delay: "100",
+//     origin: "left",
+//     interval: 450,
+//     opacity: 1,
+//   }
+// );
 
 
 ScrollReveal().reveal(
@@ -72,7 +84,8 @@ ScrollReveal().reveal(
     easing: "ease",
     delay: "800",
     origin: "bottom",
-    // mobile: false,
+    opacity: 1,
+    mobile: false,
   }
 );
 
@@ -94,6 +107,18 @@ ScrollReveal().reveal(".tabs__nav> li> *", {
   opacity: 1,
   mobile: false,
 });
+
+ScrollReveal().reveal(".gallery-main__list> li", {
+  duration: 600,
+  distance: "10px",
+  easing: "ease",
+  delay: "100",
+  origin: "left",
+  interval: 100,
+  opacity: 1,
+  mobile: false,
+});
+
 
 
 

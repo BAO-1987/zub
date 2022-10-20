@@ -39,10 +39,31 @@
       cursor: pointer;
     }
 
-    &--main {
+
+
+    @include for-width(-mobile-l) {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+    }
+
+    // @include for-width(-mobile-l) {
+    //   grid-template-columns: repeat(1, 1fr);
+    //   margin-bottom: rem(30);
+    //   gap: 10px;
+    // }
+  }
+
+  &-main {
+
+    &__list {
+      display: grid;
       grid-template-columns: repeat(4, 1fr);
       margin-bottom: rem(70);
       gap: 5px 10px;
+
+      li {
+        cursor: pointer;
+      }
 
       li:nth-child(n + 9) {
         display: none;
@@ -57,16 +78,6 @@
       }
     }
 
-    @include for-width(-mobile-l) {
-      grid-template-columns: repeat(2, 1fr);
-      gap: 20px;
-    }
-
-    // @include for-width(-mobile-l) {
-    //   grid-template-columns: repeat(1, 1fr);
-    //   margin-bottom: rem(30);
-    //   gap: 10px;
-    // }
   }
 
 

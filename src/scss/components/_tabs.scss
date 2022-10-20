@@ -58,29 +58,48 @@
       padding: rem(10);
     }
 
-   @include for-width(-mobile-l) {
+    @include for-width(-mobile-l) {
       font-size: 12px;
-      }
-
-      &--active {
-        background-color: var(--color-active);
-
-        &:focus {
-          background-color: var(--color-active);
-        }
-      }
     }
 
+    &--active {
+      background-color: var(--color-active);
 
-    &__panel {
-      display: none;
-      opacity: 0;
-      visibility: hidden;
-
-      &--active {
-        display: block;
-        opacity: 1;
-        visibility: visible;
+      &:focus {
+        background-color: var(--color-active);
       }
     }
   }
+
+  &__content {
+    overflow: hidden;
+  }
+
+  &__panel {
+    display: none;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateX(100%);
+    transition-property: opacity, visibility, transform;
+    transition-duration: 0.9s;
+    transition-timing-function: ease;
+
+    &--active {
+      display: block;
+      opacity: 1;
+      visibility: visible;
+      transform: translate(0);
+      animation: carousel 0.9s ease;
+  }
+  }
+}
+
+@keyframes carousel {
+  0% {
+    transform: translateX(-100%);
+  }
+
+  to {
+    transform: translate(0);
+  }
+}
