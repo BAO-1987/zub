@@ -407,13 +407,29 @@ h3 {
   &--reverse {
     right: 60px;
 
+    &::before {
+      content: "";
+      position: absolute;
+      right: 0;
+      top: 0;
+      mask-image: url("../img/sprite.svg#arrow-left");
+      mask-position: center;
+      mask-repeat: no-repeat;
+      mask-size: cover;
+      width: 30px;
+      height: 30px;
+      background-color: var(--color-white);
+
+      @include for-width(-mobile-l) {
+        width: 20px;
+        height: 20px;
+      }
+    }
+
     @include for-width(-mobile-l) {
       right: 30px;
     }
 
-    &::before {
-      transform: rotate(-180deg);
-    }
   }
 
   &:hover::before {
@@ -427,15 +443,19 @@ h3 {
 }
 
 .slider-btn.swiper-button-disabled {
-  opacity: 0.4;
+  // opacity: 0.9;
   pointer-events: none;
+
+  &::before {
+    background-color: var(--color-gray);
+  }
 }
 
 .chats {
   @include flex-all-center;
 
   position: fixed;
-  right: calc((100% - 1440px) / 2);
+  right: rem(20);
   bottom: rem(40);
   z-index: 20;
   border: 1px solid var(--color-white);

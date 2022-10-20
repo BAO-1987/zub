@@ -31,8 +31,6 @@
 
   &__inner {
     @include adaptive_size("font-size", 16, 14);
-    @include flex-c;
-
     position: relative;
     padding-top: rem(105);
     width: 100%;
@@ -61,13 +59,16 @@
       padding-top: rem(25);
     }
 
-    @include for-width(-mobile-sl) {
-      height: 100%;
-    }
+    // @include for-width(-mobile-sl) {
+    //   height: 100%;
+    // }
   }
 
   &__blockquote {
+    @include flex-c;
+
     margin-bottom: 15px;
+    height: 100%;
   }
 
   &__author {

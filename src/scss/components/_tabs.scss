@@ -81,7 +81,7 @@
     visibility: hidden;
     transform: translateX(100%);
     transition-property: opacity, visibility, transform;
-    transition-duration: 0.9s;
+    transition-duration: 2s;
     transition-timing-function: ease;
 
     &--active {
@@ -89,7 +89,7 @@
       opacity: 1;
       visibility: visible;
       transform: translate(0);
-      animation: carousel 0.9s ease;
+      animation: carousel 2s ease;
   }
   }
 }

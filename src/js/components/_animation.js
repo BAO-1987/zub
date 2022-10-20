@@ -120,8 +120,6 @@ ScrollReveal().reveal(".gallery-main__list> li", {
 });
 
 
-
-
 ScrollReveal().reveal(".footer", {
   duration: 800,
   distance: "10%",

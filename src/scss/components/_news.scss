@@ -1,7 +1,6 @@
 .news {
   position: relative;
 
-
   &::before {
     left: 12%;
     top: -9%;
@@ -42,12 +41,12 @@
     gap: rem(50);
 
     @include for-width(-tablet) {
-      gap: rem(25);
+      gap: rem(20);
     }
 
     @include for-width(-mobile-l) {
       grid-template-columns: repeat(2, 1fr);
-      gap: rem(10);
+      gap: rem(15);
     }
 
     @include for-width(-mobile-sl) {
@@ -81,10 +80,14 @@
         padding: 10px;
       }
 
-      @include for-width(-tablet) {
-        width: 100%;
-        max-width: 350px;
-      }
+      // @include for-width(-tablet) {
+      //   width: 100%;
+      //   max-width: 350px;
+      // }
+
+      // @include for-width(-mobile-l) {
+      //   max-width: 320px;
+      // }
     }
   }
 
