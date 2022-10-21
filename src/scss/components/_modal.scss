@@ -4,6 +4,13 @@
     .btn--cursor {
       width: 100%;
     }
+
+    .custom-checkbox__content {
+      @include for-width(-mobile-l) {
+        min-height: 50px;
+        font-size: 10px;
+      }
+    }
   }
 
   &__container {
