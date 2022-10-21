@@ -40,30 +40,6 @@ ScrollReveal().reveal(".gallery__list> li", {
   opacity: 0,
 });
 
-// ScrollReveal().reveal(
-//   ".gallery-main__list> li", {
-//     duration: 500,
-//     distance: "10%",
-//     easing: "ease",
-//     delay: "100",
-//     origin: "left",
-//     interval: 450,
-//     opacity: 1,
-//   }
-// );
-
-// ScrollReveal().reveal(
-//   ".gallery__list--main> li ", {
-//     duration: 500,
-//     distance: "10%",
-//     easing: "ease",
-//     delay: "100",
-//     origin: "left",
-//     interval: 450,
-//     opacity: 1,
-//   }
-// );
-
 ScrollReveal().reveal(
   ".services__more, .news__more, .reviews__more, .gallery__more, .slider-btn, .btn--second",
   {
@@ -140,7 +116,7 @@ ScrollReveal().reveal(".dentures__title., title--second", {
 });
 
 ScrollReveal().reveal(
-  ".advantages__list, .dentures__list, .services__list, .stages__list",
+  ".advantages__list, .dentures__list, .services__list, .investment__list, .stages__list",
   {
     duration: 600,
     distance: "20px",
