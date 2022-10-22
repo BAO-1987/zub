@@ -82,9 +82,8 @@
     visibility: hidden;
     transform: translateX(100%);
     transition-property: opacity, visibility, transform;
-    transition-duration: 2s;
+    transition-duration: 3s;
     transition-timing-function: ease;
-
 
     &--active {
       display: block;

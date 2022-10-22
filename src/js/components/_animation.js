@@ -87,7 +87,7 @@ ScrollReveal().reveal(".gallery-main__list> li", {
   delay: "100",
   origin: "top",
   interval: 100,
-  opacity: 0,
+  opacity: 1,
   mobile: false,
 });
 
