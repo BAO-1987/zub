@@ -4,7 +4,7 @@ import {
   Panzoom
 } from "@fancyapps/ui";
 
-Fancybox.bind('[data-fancybox="gallery"]', {
+Fancybox.bind('[data-fancybox]', {
   dragToClose: false,
 
   // Toolbar: false,

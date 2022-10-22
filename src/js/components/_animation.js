@@ -82,12 +82,12 @@ ScrollReveal().reveal(".tabs__nav> li> *", {
 
 ScrollReveal().reveal(".gallery-main__list> li", {
   duration: 600,
-  distance: "10px",
+  distance: "15px",
   easing: "ease",
   delay: "100",
-  origin: "left",
+  origin: "top",
   interval: 100,
-  opacity: 1,
+  opacity: 0,
   mobile: false,
 });
 

@@ -504,22 +504,23 @@ h3 {
   }
 
   &__list {
-    @include flex-all-center;
+    @include flex;
   }
 
   &__item {
     &:not(:last-child) {
-      margin-right: rem(70);
+      margin-right: rem(65);
     }
   }
 
   &__link {
+    @include flex-all-center;
+    
     position: relative;
 
     &::before {
       content: "";
       position: absolute;
-      right: 0;
       mask-image: url("../img/sprite.svg#viber");
       mask-position: center;
       mask-repeat: no-repeat;

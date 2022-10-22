@@ -14,9 +14,11 @@
   }
 
   &__container {
-    padding: rem(70) rem(200);
-    background-color: var(--color-black);
+    padding: rem(70) rem(100);
+    width: 100%;
+    max-width: 700px;
     text-align: center;
+    background-color: var(--color-black);
 
     @include for-width(-mobile-l) {
       padding: rem(50);
@@ -26,6 +28,12 @@
       padding: rem(70) rem(100);
       width: 100%;
       max-width: 500px;
+    }
+  }
+
+  &__content {
+    &--chats {
+      @include flex-cc;
     }
   }
 
