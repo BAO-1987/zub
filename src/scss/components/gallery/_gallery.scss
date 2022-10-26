@@ -59,8 +59,8 @@
 
       li:nth-child(n + 9) {
         display: none;
-        visibility: hidden;
         opacity: 0;
+        visibility: hidden;
       }
 
       li.is-visible {
