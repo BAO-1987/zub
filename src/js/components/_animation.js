@@ -20,8 +20,7 @@ ScrollReveal().reveal(".text", {
 });
 
 ScrollReveal().reveal(
-  ".content, .reviews-slider, .news__item, .news-slider, .cad-cam__box, .implantation__box",
-  {
+  ".content, .reviews-slider, .news__item, .news-slider, .cad-cam__box, .implantation__box", {
     duration: 700,
     distance: "10px",
     easing: "ease",
@@ -32,17 +31,16 @@ ScrollReveal().reveal(
 
 ScrollReveal().reveal(".gallery__list> li", {
   duration: 500,
-  distance: "10px",
+  distance: "20%",
   easing: "ease",
   delay: "100",
   origin: "top",
-  interval: 450,
+  interval: 200,
   opacity: 0,
 });
 
 ScrollReveal().reveal(
-  ".services__more, .news__more, .reviews__more, .gallery__more, .slider-btn, .btn--second",
-  {
+  ".services__more, .news__more, .reviews__more, .gallery__more, .slider-btn, .btn--second", {
     duration: 500,
     distance: "10px",
     easing: "ease",
@@ -116,8 +114,7 @@ ScrollReveal().reveal(".dentures__title., title--second", {
 });
 
 ScrollReveal().reveal(
-  ".advantages__list, .dentures__list, .services__list, .investment__list, .stages__list",
-  {
+  ".advantages__list, .dentures__list, .services__list, .investment__list, .stages__list", {
     duration: 600,
     distance: "20px",
     easing: "ease",
@@ -125,5 +122,3 @@ ScrollReveal().reveal(
     origin: "top",
   }
 );
-
-
