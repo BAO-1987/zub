@@ -71,6 +71,7 @@
       &.open {
         opacity: 1;
         visibility: visible;
+        transition: opacity 0.3s linear, visibility 0.3s linear;
 
         @include for-width(-tablet) {
           display: block;

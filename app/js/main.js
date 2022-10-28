@@ -492,6 +492,7 @@ const reviewsSlider = new swiper_bundle__WEBPACK_IMPORTED_MODULE_0__["default"](
   slidesPerView: 1,
   mousewheelControl: true,
   keyboardControl: true,
+  grabCursor: true,
   // autoplay: {
   //   delay: 2000,
   // },
@@ -509,6 +510,7 @@ const newsSlider = new swiper_bundle__WEBPACK_IMPORTED_MODULE_0__["default"](".n
   spaceBetween: 10,
   mousewheelControl: true,
   keyboardControl: true,
+  grabCursor: true,
   // autoplay: {
   //   delay: 2000,
   // },
