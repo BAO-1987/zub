@@ -53,8 +53,8 @@ ScrollReveal().reveal(".btn--show-more", {
   duration: 800,
   distance: "10px",
   easing: "ease",
-  delay: "200",
-  origin: "bottom",
+  delay: "100",
+  origin: "top",
   opacity: 1,
   mobile: false,
 });
