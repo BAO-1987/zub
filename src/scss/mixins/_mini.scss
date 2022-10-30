@@ -43,6 +43,11 @@
   justify-content: space-between;
 }
 
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+}
+
 @mixin flex-se {
   display: flex;
   justify-content: space-evenly;

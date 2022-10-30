@@ -2,77 +2,59 @@
 
   <h2 class="news__title title">новини</h2>
 
-  <ul class="news__list">
+   <ul class="news__list">
 
-    @loop("../_article.html",[{
-    class: "news__item",
-    image: "news/gypsum-jaw",
-    imageDescr: "зображення протезованої щелепи",
-    width: "445",
-    height: "160",
-    title: "Як виготовляються протези",
-    text: "Спочатку проводиться первинна консультація у профільного спеціаліста6565656565656",
-    time: "29.08.2022",
-    link: "Детальніше"
-    },
-    {
-    class: "news__item",
-    image: "news/gypsum-jaw",
-    imageDescr: "зображення протезованої щелепи",
-    width: "445",
-    height: "160",
-    title: "Як виготовляються протези",
-    text: "Спочатку проводиться первинна консультація у профільного спеціаліста1111111111111",
-    time: "29.08.2022",
-    link: "Детальніше"
-    },
-    {
-    class: "news__item",
-    image: "news/gypsum-jaw",
-    imageDescr: "зображення протезованої щелепи",
-    width: "445",
-    height: "160",
-    title: "Як виготовляються протези",
-    text: "Спочатку проводиться первинна консультація у профільного спеціаліста. ав",
-    time: "29.08.2022",
-    link: "Детальніше"
-    },
-    {
-    class: "news__item",
-    image: "news/gypsum-jaw",
-    imageDescr: "зображення протезованої щелепи",
-    width: "445",
-    height: "160",
-    title: "Як виготовляються протези",
-    text: "Спочатку проводиться первинна консультація у профільного спеціаліста. ав",
-    time: "29.08.2022",
-    link: "Детальніше"
-    },
-    {
-    class: "news__item",
-    image: "news/gypsum-jaw",
-    imageDescr: "зображення протезованої щелепи",
-    width: "445",
-    height: "160",
-    title: "Як виготовляються протези",
-    text: "Спочатку проводиться первинна консультація у профільного спеціаліста. ав",
-    time: "29.08.2022",
-    link: "Детальніше"
-    },
-    {
-    class: "news__item",
-    image: "news/gypsum-jaw",
-    imageDescr: "зображення протезованої щелепи",
-    width: "445",
-    height: "160",
-    title: "Як виготовляються протези",
-    text: "Спочатку проводиться первинна консультація у профільного спеціаліста. ав",
-    time: "29.08.2022",
-    link: "Детальніше"
-    }
-    ])
+     @loop("../_article.html",[{
+     class: "news-slider__item swiper-slide",
+     image: "news/gypsum-jaw",
+     imageDescr: "зображення протезованої щелепи",
+     width: "445",
+     height: "160",
+     title: "Як виготовляються протези",
+     text: "Спочатку проводиться первинна консультація у профільного спеціаліста...",
+     time: "29.08.2022",
+     link: "Детальніше",
+     http: "https://bao-1987.github.io/zub/app/production"
+     },
+     {
+     class: "news-slider__item swiper-slide",
+     image: "news/implant-gums",
+     imageDescr: "зображення протезованої щелепи",
+     width: "445",
+     height: "160",
+     title: "Імплантація зубів",
+     text: "Найпоширенішим металом, з якого виготовляють імпланти є титан...",
+     time: "30.10.2022",
+     link: "Детальніше",
+     http: "https://bao-1987.github.io/zub/app/production-implant"
+     },
+     {
+     class: "news-slider__item swiper-slide",
+     image: "news/installation-veneers",
+     imageDescr: "зображення приклеювання вінірів на зуб",
+     width: "445",
+     height: "160",
+     title: "Вініри",
+     text: "Красиві й білосніжні зуби – ознака успішної і здорової людини...",
+     time: "31.10.2022",
+     link: "Детальніше",
+     http: "https://bao-1987.github.io/zub/app/production-veneers"
+     },
+     {
+     class: "news-slider__item swiper-slide",
+     image: "news/mandible-plastic",
+     imageDescr: "зображення протезованої щелепи",
+     width: "445",
+     height: "160",
+     title: "Протезування",
+     text: "Стоматологічне протезування — розділ стоматології, який займається відновленням тканин зуба...",
+     time: "25.08.2022",
+     link: "Детальніше",
+     http: "https://bao-1987.github.io/zub/app/production-dentures"
+     }
+     ])
 
-  </ul>
+   </ul>
 
   @include("../_pagination.html")
 </section>
