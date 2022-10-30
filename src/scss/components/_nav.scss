@@ -135,7 +135,8 @@
 
   &__link {
     position: relative;
-    display: inline-block;
+    // display: inline-block;
+    color: inherit;
     transition: color 0.3s linear;
 
     &::before {
