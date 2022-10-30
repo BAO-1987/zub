@@ -2810,7 +2810,7 @@ li [data-fancybox] img {
   font-size: 14px;
   color: var(--color-grey);
 }
-.article__text:hover {
+.article:hover {
   border: 1px solid var(--color-active);
 }
 
