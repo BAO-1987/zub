@@ -72,16 +72,16 @@ ScrollReveal().reveal(".tabs__nav> li> *", {
   mobile: false,
 });
 
-ScrollReveal().reveal(".gallery-main__list> li", {
-  duration: 600,
-  distance: "20%",
-  easing: "ease",
-  delay: "200",
-  origin: "bottom",
-  // interval: 50,
-  opacity: 1,
-  mobile: false,
-});
+// ScrollReveal().reveal(".gallery-main__list> li", {
+//   duration:500,
+//   distance: "10%",
+//   easing: "ease",
+//   // delay: "200",
+//  origin: "bottom",
+//   // interval: 50,
+//   opacity: 1,
+//   mobile: false,
+// });
 
 ScrollReveal().reveal(".footer", {
   duration: 800,
