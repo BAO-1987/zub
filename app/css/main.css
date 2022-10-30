@@ -1745,6 +1745,11 @@ h3::first-letter {
   grid-template-columns: repeat(4, 1fr);
   margin-bottom: 4.375rem;
   gap: 10px;
+  -webkit-transform: translate(0);
+  -ms-transform: translate(0);
+  transform: translate(0);
+  -webkit-animation: carousel-gallery 3s ease;
+  animation: carousel-gallery 3s ease;
 }
 .gallery-main__list li {
   cursor: pointer;
@@ -1766,6 +1771,27 @@ h3::first-letter {
   margin: 0 auto;
 }
 
+@-webkit-keyframes carousel-gallery {
+  0% {
+    -webkit-transform: translateY(-10%);
+    transform: translateY(-10%);
+  }
+  to {
+    -webkit-transform: translate(0);
+    transform: translate(0);
+  }
+}
+
+@keyframes carousel-gallery {
+  0% {
+    -webkit-transform: translateY(-10%);
+    transform: translateY(-10%);
+  }
+  to {
+    -webkit-transform: translate(0);
+    transform: translate(0);
+  }
+}
 li [data-fancybox] img {
   cursor: -webkit-zoom-in;
   cursor: zoom-in;

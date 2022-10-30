@@ -235,17 +235,7 @@ __webpack_require__.r(__webpack_exports__);
   interval: 200,
   opacity: 1,
   mobile: false
-}); // ScrollReveal().reveal(".gallery-main__list> li", {
-//   duration:500,
-//   distance: "10%",
-//   easing: "ease",
-//   // delay: "200",
-//  origin: "bottom",
-//   // interval: 50,
-//   opacity: 1,
-//   mobile: false,
-// });
-
+});
 (0,scrollreveal__WEBPACK_IMPORTED_MODULE_0__["default"])().reveal(".footer", {
   duration: 800,
   distance: "10px",
