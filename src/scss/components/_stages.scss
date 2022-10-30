@@ -38,20 +38,22 @@
       border: 1px solid var(--color-white);
       padding: clamp(20px, 1.95rem, 30px);
       letter-spacing: 0.038em;
+      text-align: center;
       transition-property: box-shadow, border;
       transition-duration: 0.3s;
       transition-timing-function: linear;
       cursor: pointer;
 
       &::before {
-        @include adaptive_size("font-size", 100, 20);
+        @include adaptive_size("font-size", 100, 25);
 
         counter-increment: li;
         content: counter(li, decimal-leading-zero);
-        width: 100%;
+        display: block;
         font-weight: 900;
         line-height: 1;
         letter-spacing: 0.07em;
+        text-align: center;
         text-transform: uppercase;
         color: var(--color-blue);
 
@@ -74,12 +76,12 @@
       span {
         @include adaptive_size("font-size", 80, 20);
 
-        display: inline-block;
+        display: block;
         margin-bottom: rem(33);
-        padding-left: 3px;
         font-weight: 900;
         line-height: 1;
         letter-spacing: 0.07em;
+        text-align: center;
         text-transform: uppercase;
         color: var(--color-blue);
 
@@ -134,18 +136,12 @@
         letter-spacing: 0.06em;
 
         h3 {
-          text-align: left;
-
-          @include for-width(-desktop-lg) {
-            text-align: center;
-          }
 
           @include for-width(-mobile-l) {
             @include flex-all-center;
 
             margin-bottom: rem(20);
             min-height: rem(50);
-
           }
         }
 

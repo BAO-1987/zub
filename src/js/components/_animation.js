@@ -61,14 +61,13 @@ ScrollReveal().reveal(".contacts__inner, .pagination", {
   origin: "top",
 });
 
-ScrollReveal().reveal(".tabs__nav> li> *", {
+ScrollReveal().reveal(".tabs__nav> li", {
   duration: 500,
   distance: "10px",
   easing: "ease",
   delay: "100",
   origin: "top",
   interval: 200,
-  // opacity: 1,
   mobile: false,
 });
 

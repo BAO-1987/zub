@@ -455,7 +455,7 @@ h3 {
   @include flex-all-center;
 
   position: fixed;
-  right: rem(20);
+  right: calc((100% - 1440px) / 2);
   bottom: rem(40);
   z-index: 20;
   border: 1px solid var(--color-white);

@@ -226,14 +226,13 @@ __webpack_require__.r(__webpack_exports__);
   delay: "500",
   origin: "top"
 });
-(0,scrollreveal__WEBPACK_IMPORTED_MODULE_0__["default"])().reveal(".tabs__nav> li> *", {
+(0,scrollreveal__WEBPACK_IMPORTED_MODULE_0__["default"])().reveal(".tabs__nav> li", {
   duration: 500,
   distance: "10px",
   easing: "ease",
   delay: "100",
   origin: "top",
   interval: 200,
-  // opacity: 1,
   mobile: false
 });
 (0,scrollreveal__WEBPACK_IMPORTED_MODULE_0__["default"])().reveal(".footer", {

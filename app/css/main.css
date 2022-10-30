@@ -591,7 +591,7 @@ h3::first-letter {
   -ms-flex-pack: center;
   justify-content: center;
   position: fixed;
-  right: 1.25rem;
+  right: calc((100% - 1440px) / 2);
   bottom: 2.5rem;
   z-index: 20;
   border: 1px solid var(--color-white);
@@ -1030,7 +1030,7 @@ h3::first-letter {
 .nav__list--dropdown {
   position: absolute;
   top: 100%;
-  z-index: 60;
+  z-index: 20;
   display: block;
   border: 1px solid var(--color-active);
   padding: 20px;
@@ -2354,6 +2354,7 @@ li [data-fancybox] img {
   border: 1px solid var(--color-white);
   padding: clamp(20px, 1.95rem, 30px);
   letter-spacing: 0.038em;
+  text-align: center;
   -webkit-transition-property: border, -webkit-box-shadow;
   transition-property: border, -webkit-box-shadow;
   -o-transition-property: box-shadow, border;
@@ -2368,13 +2369,14 @@ li [data-fancybox] img {
   cursor: pointer;
 }
 .stages__list li::before {
-  font-size: calc(20px + 80 * ((100vw - 320px) / 1600));
+  font-size: calc(25px + 75 * ((100vw - 320px) / 1600));
   counter-increment: li;
   content: counter(li, decimal-leading-zero);
-  width: 100%;
+  display: block;
   font-weight: 900;
   line-height: 1;
   letter-spacing: 0.07em;
+  text-align: center;
   text-transform: uppercase;
   color: var(--color-blue);
 }
@@ -2396,12 +2398,12 @@ li [data-fancybox] img {
 }
 .stages__list li span {
   font-size: calc(20px + 60 * ((100vw - 320px) / 1600));
-  display: inline-block;
+  display: block;
   margin-bottom: 2.0625rem;
-  padding-left: 3px;
   font-weight: 900;
   line-height: 1;
   letter-spacing: 0.07em;
+  text-align: center;
   text-transform: uppercase;
   color: var(--color-blue);
 }
@@ -2462,14 +2464,6 @@ li [data-fancybox] img {
 .stages__list--implantation li {
   padding: 1.75rem 3.25rem;
   letter-spacing: 0.06em;
-}
-.stages__list--implantation li h3 {
-  text-align: left;
-}
-@media (max-width: calc(90em - 0.0625em)) {
-  .stages__list--implantation li h3 {
-    text-align: center;
-  }
 }
 @media (max-width: calc(48em - 0.0625em)) {
   .stages__list--implantation li h3 {
@@ -3022,9 +3016,6 @@ li [data-fancybox] img {
   pointer-events: none;
 }
 
-.tabs {
-  color: var(--color-white);
-}
 @media (max-width: calc(75em - 0.0625em)) {
   .tabs {
     display: -webkit-box;

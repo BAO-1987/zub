@@ -1,5 +1,4 @@
 .tabs {
-  color: var(--color-white);
 
   @include for-width(-desktop-med) {
     @include flex-sb;
