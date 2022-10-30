@@ -18,7 +18,11 @@
   }
 
   h3 {
+    @include flex-center;
+    
     margin-bottom: 14px;
+    min-height: 70px;
+
   }
 
   &__timeline {

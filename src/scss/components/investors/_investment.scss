@@ -7,23 +7,36 @@
     @include for-width(-tablet) {
       grid-template-columns: repeat(2, 1fr);
       grid-template-rows: repeat(2, auto);
-      gap: 20px;
+      gap: rem(20);
     }
 
-    @include for-width(-mobile-md) {
-      grid-template-columns: repeat(1, 1fr);
-      grid-template-rows: repeat(3, 1fr);
-    }
+    // @include for-width(-mobile-md) {
+    //   grid-template-columns: repeat(1, 1fr);
+    //   grid-template-rows: repeat(3, 1fr);
+    // }
   }
 
-li {
+  li {
     border: 1px solid var(--color-white);
     padding: rem(100) rem(30);
+    transition-property: box-shadow, border;
+    transition-duration: 0.3s;
+    transition-timing-function: linear;
+    cursor: pointer;
 
     h3 {
       @include flex-all-center;
 
       min-height: 90px;
+    }
+
+    &:hover {
+      border: 1px solid var(--color-active);
+      box-shadow: 12px 12px 25px var(--color-active) inset;
+    }
+
+    @include for-width(-tablet) {
+      padding: clamp(5px, 1.85rem, 10px);
     }
   }
 }
