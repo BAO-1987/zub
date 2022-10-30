@@ -29,6 +29,7 @@
     margin-bottom: rem(66);
     gap: 10px;
 
+
     @include for-width(-mobile-l) {
       grid-template-columns: repeat(2, 1fr);
       margin-bottom: rem(30);
@@ -79,6 +80,16 @@
 
   &__more {
     margin: 0 auto;
+  }
+}
+
+@keyframes carousel {
+  0% {
+    transform: translateY(-100%);
+  }
+
+  to {
+    transform: translate(0);
   }
 }
 

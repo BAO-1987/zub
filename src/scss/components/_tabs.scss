@@ -80,7 +80,7 @@
     display: none;
     opacity: 0;
     visibility: hidden;
-    transform: translateX(100%);
+    // transform: translateY(100%);
     transition-property: opacity, visibility, transform;
     transition-duration: 2s;
     transition-timing-function: ease;
@@ -90,17 +90,17 @@
       opacity: 1;
       visibility: visible;
       transform: translate(0);
-      animation: carousel 2s ease;
+      // animation: carousel 2s ease;
     }
   }
 }
 
-@keyframes carousel {
-  0% {
-    transform: translateX(-100%);
-  }
+// @keyframes carousel {
+//   0% {
+//     transform: translateY(-100%);
+//   }
 
-  to {
-    transform: translate(0);
-  }
-}
+//   to {
+//     transform: translate(0);
+//   }
+// }

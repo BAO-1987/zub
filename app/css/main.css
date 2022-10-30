@@ -1658,6 +1658,9 @@ h3::first-letter {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   position: relative;
   height: 50vh;
 }
@@ -1776,6 +1779,27 @@ h3::first-letter {
   margin: 0 auto;
 }
 
+@-webkit-keyframes carousel {
+  0% {
+    -webkit-transform: translateY(-100%);
+    transform: translateY(-100%);
+  }
+  to {
+    -webkit-transform: translate(0);
+    transform: translate(0);
+  }
+}
+
+@keyframes carousel {
+  0% {
+    -webkit-transform: translateY(-100%);
+    transform: translateY(-100%);
+  }
+  to {
+    -webkit-transform: translate(0);
+    transform: translate(0);
+  }
+}
 @-webkit-keyframes carousel-gallery {
   0% {
     -webkit-transform: translateY(-10%);
@@ -1786,7 +1810,6 @@ h3::first-letter {
     transform: translate(0);
   }
 }
-
 @keyframes carousel-gallery {
   0% {
     -webkit-transform: translateY(-10%);
@@ -2827,6 +2850,9 @@ li [data-fancybox] img {
 }
 .pagination li {
   border: 1px solid var(--color-white);
+  -webkit-transition: border 0.3s linear;
+  -o-transition: border 0.3s linear;
+  transition: border 0.3s linear;
 }
 .pagination li:not(:last-child) {
   margin-right: 20px;
@@ -2837,6 +2863,12 @@ li [data-fancybox] img {
   align-items: baseline;
   border: none;
   font-size: 30px;
+}
+.pagination li:nth-child(4n):hover {
+  border: none;
+}
+.pagination li:hover {
+  border: 1px solid var(--color-blue);
 }
 .pagination a {
   display: -webkit-box;
@@ -3090,9 +3122,6 @@ li [data-fancybox] img {
   display: none;
   opacity: 0;
   visibility: hidden;
-  -webkit-transform: translateX(100%);
-  -ms-transform: translateX(100%);
-  transform: translateX(100%);
   -webkit-transition-property: opacity, visibility, -webkit-transform;
   transition-property: opacity, visibility, -webkit-transform;
   -o-transition-property: opacity, visibility, transform;
@@ -3112,31 +3141,8 @@ li [data-fancybox] img {
   -webkit-transform: translate(0);
   -ms-transform: translate(0);
   transform: translate(0);
-  -webkit-animation: carousel 2s ease;
-  animation: carousel 2s ease;
 }
 
-@-webkit-keyframes carousel {
-  0% {
-    -webkit-transform: translateX(-100%);
-    transform: translateX(-100%);
-  }
-  to {
-    -webkit-transform: translate(0);
-    transform: translate(0);
-  }
-}
-
-@keyframes carousel {
-  0% {
-    -webkit-transform: translateX(-100%);
-    transform: translateX(-100%);
-  }
-  to {
-    -webkit-transform: translate(0);
-    transform: translate(0);
-  }
-}
 .footer {
   padding: 4.375rem 0;
   background-color: var(--color-bunker);

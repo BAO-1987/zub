@@ -68,7 +68,7 @@ ScrollReveal().reveal(".tabs__nav> li> *", {
   delay: "100",
   origin: "top",
   interval: 200,
-  opacity: 1,
+  // opacity: 1,
   mobile: false,
 });
 
