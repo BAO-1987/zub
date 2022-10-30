@@ -70,6 +70,10 @@
         opacity: 1;
         visibility: visible;
       }
+
+      @include for-width(-tablet) {
+        margin-bottom: rem(35);
+      }
     }
   }
 
