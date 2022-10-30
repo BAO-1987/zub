@@ -31,11 +31,12 @@
     @include for-width(-mobile-l) {
       text-align: center;
     }
-  }
 
-  &__item {
-    &:not(:last-child) {
-      margin-bottom: rem(34);
+    li {
+      &:not(:last-child) {
+        margin-bottom: rem(34);
+      }
     }
   }
+
 }
