@@ -6,5 +6,6 @@ import './components/_digits'
 import './components/_show-more'
 import './components/_modal'
 import './components/_headerHeight'
+import './components/_headerHide'
 import './components/_fancy'
 

@@ -39,7 +39,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_show_more__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_components_show_more__WEBPACK_IMPORTED_MODULE_5__);
 /* harmony import */ var _components_modal__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./components/_modal */ "./src/js/components/_modal.js");
 /* harmony import */ var _components_headerHeight__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./components/_headerHeight */ "./src/js/components/_headerHeight.js");
-/* harmony import */ var _components_fancy__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./components/_fancy */ "./src/js/components/_fancy.js");
+/* harmony import */ var _components_headerHide__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./components/_headerHide */ "./src/js/components/_headerHide.js");
+/* harmony import */ var _components_headerHide__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(_components_headerHide__WEBPACK_IMPORTED_MODULE_8__);
+/* harmony import */ var _components_fancy__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./components/_fancy */ "./src/js/components/_fancy.js");
+
 
 
 
@@ -423,6 +426,64 @@ getHeaderHeight();
 window.addEventListener("resize", () => {
   getHeaderHeight();
 });
+
+/***/ }),
+
+/***/ "./src/js/components/_headerHide.js":
+/*!******************************************!*\
+  !*** ./src/js/components/_headerHide.js ***!
+  \******************************************/
+/***/ (() => {
+
+(function () {
+  const doc = document.documentElement;
+  const w = window;
+  let curScroll;
+  let prevScroll = w.scrollY || doc.scrollTop;
+  let curDirection = 0;
+  let prevDirection = 0;
+  const header = document.querySelector(".header");
+  let toggled;
+  const threshold = 200;
+
+  const checkScroll = function () {
+    curScroll = w.scrollY || doc.scrollTop;
+
+    if (curScroll > prevScroll) {
+      // scrolled down
+      curDirection = 2;
+    } else {
+      //scrolled up
+      curDirection = 1;
+    }
+
+    if (curDirection !== prevDirection) {
+      toggled = toggleHeader();
+    }
+
+    prevScroll = curScroll;
+
+    if (toggled) {
+      prevDirection = curDirection;
+    }
+  };
+
+  const toggleHeader = function () {
+    toggled = true;
+
+    if (curDirection === 2 && curScroll > threshold) {
+      header.classList.add("hide");
+    } else if (curDirection === 1) {
+      header.classList.remove("hide");
+    } else {
+      toggled = false;
+    }
+
+    return toggled;
+  };
+
+  window.addEventListener("scroll", checkScroll);
+})();
 
 /***/ }),
 
