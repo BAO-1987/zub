@@ -1759,19 +1759,6 @@ h3::first-letter {
 }
 .gallery-main__list li {
   cursor: pointer;
-  -webkit-transition: opacity 0.3s linear, visibility 0.3s linear;
-  -o-transition: opacity 0.3s linear, visibility 0.3s linear;
-  transition: opacity 0.3s linear, visibility 0.3s linear;
-}
-.gallery-main__list li:nth-child(n+9) {
-  display: none;
-  opacity: 0;
-  visibility: hidden;
-}
-.gallery-main__list li.is-visible {
-  display: block;
-  opacity: 1;
-  visibility: visible;
 }
 @media (max-width: calc(62em - 0.0625em)) {
   .gallery-main__list {

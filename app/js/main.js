@@ -35,14 +35,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_tabs__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./components/_tabs */ "./src/js/components/_tabs.js");
 /* harmony import */ var _components_digits__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./components/_digits */ "./src/js/components/_digits.js");
 /* harmony import */ var _components_digits__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_components_digits__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var _components_show_more__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./components/_show-more */ "./src/js/components/_show-more.js");
-/* harmony import */ var _components_show_more__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_components_show_more__WEBPACK_IMPORTED_MODULE_5__);
-/* harmony import */ var _components_modal__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./components/_modal */ "./src/js/components/_modal.js");
-/* harmony import */ var _components_headerHeight__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./components/_headerHeight */ "./src/js/components/_headerHeight.js");
-/* harmony import */ var _components_headerHide__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./components/_headerHide */ "./src/js/components/_headerHide.js");
-/* harmony import */ var _components_headerHide__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(_components_headerHide__WEBPACK_IMPORTED_MODULE_8__);
-/* harmony import */ var _components_fancy__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./components/_fancy */ "./src/js/components/_fancy.js");
-
+/* harmony import */ var _components_modal__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./components/_modal */ "./src/js/components/_modal.js");
+/* harmony import */ var _components_headerHeight__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./components/_headerHeight */ "./src/js/components/_headerHeight.js");
+/* harmony import */ var _components_headerHide__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./components/_headerHide */ "./src/js/components/_headerHide.js");
+/* harmony import */ var _components_headerHide__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(_components_headerHide__WEBPACK_IMPORTED_MODULE_7__);
+/* harmony import */ var _components_fancy__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./components/_fancy */ "./src/js/components/_fancy.js");
 
 
 
@@ -182,7 +179,14 @@ __webpack_require__.r(__webpack_exports__);
 (0,scrollreveal__WEBPACK_IMPORTED_MODULE_0__["default"])({
   reset: true,
   easing: "ease"
-});
+}); // ScrollReveal().reveal(".header", {
+//   duration: 1000,
+//   distance: "100%",
+//   delay: "200",
+//   origin: "top",
+//   mobile: false,
+// });
+
 (0,scrollreveal__WEBPACK_IMPORTED_MODULE_0__["default"])().reveal(".hero__title", {
   duration: 1000,
   distance: "20px",
@@ -208,7 +212,15 @@ __webpack_require__.r(__webpack_exports__);
   origin: "top",
   interval: 200,
   opacity: 0
-});
+}); // ScrollReveal().reveal(".gallery-main__list> li", {
+//   duration: 500,
+//   distance: "80%",
+//   delay: "100",
+//   origin: "top",
+//   interval: 200,
+//   opacity: 1,
+// });
+
 (0,scrollreveal__WEBPACK_IMPORTED_MODULE_0__["default"])().reveal(".services__more, .news__more, .reviews__more, .gallery__more, .slider-btn, .btn--second", {
   duration: 500,
   distance: "10px",
@@ -498,27 +510,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var graph_modal__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! graph-modal */ "./node_modules/graph-modal/src/graph-modal.js");
 
 const modal = new graph_modal__WEBPACK_IMPORTED_MODULE_0__["default"]();
-
-/***/ }),
-
-/***/ "./src/js/components/_show-more.js":
-/*!*****************************************!*\
-  !*** ./src/js/components/_show-more.js ***!
-  \*****************************************/
-/***/ (() => {
-
-document.addEventListener("DOMContentLoaded", () => {
-  if (document.querySelector(".tabs__panel")) {
-    let t = 12;
-    const e = document.querySelector(".btn--show-more"),
-          o = document.querySelectorAll("li").length;
-    e.addEventListener("click", c => {
-      t += 4;
-      const r = Array.from(document.querySelector(".gallery-main__list").children).slice(0, t);
-      r.forEach(t => t.classList.add("is-visible")), r.length === o && (e.style.display = "none");
-    });
-  }
-});
 
 /***/ }),
 

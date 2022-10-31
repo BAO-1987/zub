@@ -4,6 +4,14 @@ ScrollReveal({
   easing: "ease",
 });
 
+// ScrollReveal().reveal(".header", {
+//   duration: 1000,
+//   distance: "100%",
+//   delay: "200",
+//   origin: "top",
+//   mobile: false,
+// });
+
 ScrollReveal().reveal(".hero__title", {
   duration: 1000,
   distance: "20px",
@@ -35,6 +43,16 @@ ScrollReveal().reveal(".gallery__list> li", {
   interval: 200,
   opacity: 0,
 });
+
+// ScrollReveal().reveal(".gallery-main__list> li", {
+//   duration: 500,
+//   distance: "80%",
+//   delay: "100",
+//   origin: "top",
+//   interval: 200,
+//   opacity: 1,
+// });
+
 
 ScrollReveal().reveal(
   ".services__more, .news__more, .reviews__more, .gallery__more, .slider-btn, .btn--second", {
