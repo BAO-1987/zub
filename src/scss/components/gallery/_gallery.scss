@@ -50,17 +50,12 @@
     &__list {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
-      margin-bottom: rem(70);
       gap: 10px;
       transform: translate(0);
       animation: carousel-gallery 3s ease;
 
       li {
         cursor: pointer;
-      }
-
-      @include for-width(-tablet) {
-        margin-bottom: rem(35);
       }
     }
   }

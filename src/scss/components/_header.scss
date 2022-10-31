@@ -5,6 +5,7 @@
   margin-bottom: 10px;
   padding: rem(63) 0 rem(62);
   background-color: var(--color-black);
+  transition: top 0.3s ease-in-out;
 
   @include for-width(-tablet) {
     margin-bottom: 10px;
