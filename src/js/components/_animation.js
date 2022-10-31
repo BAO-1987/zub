@@ -7,7 +7,7 @@ ScrollReveal({
 ScrollReveal().reveal(".header", {
   duration: 1000,
   distance: "100%",
-  delay: "1000",
+  delay: "750",
   origin: "top",
   mobile: false,
   reset: false,
@@ -55,14 +55,6 @@ ScrollReveal().reveal(
   }
 );
 
-// ScrollReveal().reveal(".btn--show-more", {
-//   duration: 800,
-//   distance: "10px",
-//   delay: "100",
-//   origin: "top",
-//   opacity: 1,
-//   mobile: false,
-// });
 
 ScrollReveal().reveal(".contacts__inner, .pagination", {
   duration: 700,
@@ -78,6 +70,7 @@ ScrollReveal().reveal(".tabs__nav> li", {
   delay: "100",
   origin: "top",
   interval: 200,
+  opacity: 1,
   mobile: false,
 });
 
