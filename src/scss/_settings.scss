@@ -419,7 +419,7 @@ h3 {
   @include flex-all-center;
 
   position: fixed;
-  right: calc((100% - 1440px) / 2);
+  right: rem(40);
   bottom: rem(40);
   z-index: 20;
   border: 1px solid var(--color-white);
@@ -465,6 +465,11 @@ h3 {
   @include for-width(-tablet) {
     width: 54px;
     height: 34px;
+
+    &::before {
+      width: 20px;
+      height: 20px;
+    }
   }
 
   &__list {
@@ -479,7 +484,7 @@ h3 {
 
   &__link {
     @include flex-all-center;
-    
+
     position: relative;
 
     &::before {

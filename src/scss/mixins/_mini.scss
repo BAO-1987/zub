@@ -54,6 +54,11 @@
   align-items: flex-end;
 }
 
+@mixin flex-ev {
+  display: flex;
+  justify-content: space-evenly;
+}
+
 @mixin flex-cc {
   display: flex;
   flex-direction: column;
