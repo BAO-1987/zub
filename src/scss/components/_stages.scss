@@ -47,12 +47,12 @@
       &::before {
         @include adaptive_size("font-size", 100, 25);
 
+        padding-right: clamp(5px, 1.1rem, 30px);
         counter-increment: li;
         content: counter(li, decimal-leading-zero);
-        display: block;
         font-weight: 900;
         line-height: 1;
-        letter-spacing: 0.07em;
+        letter-spacing: -0.13em;
         text-align: center;
         text-transform: uppercase;
         color: var(--color-blue);
@@ -61,7 +61,6 @@
           font-size: 100px;
         }
       }
-
 
       &:last-child {
         @include for-width(-mobile-md) {
@@ -76,11 +75,11 @@
       span {
         @include adaptive_size("font-size", 80, 20);
 
-        display: block;
+        display: inline-block;
         margin-bottom: rem(33);
         font-weight: 900;
         line-height: 1;
-        letter-spacing: 0.07em;
+        letter-spacing: 0.01em;
         text-align: center;
         text-transform: uppercase;
         color: var(--color-blue);
@@ -109,7 +108,7 @@
       }
 
       @include for-width(-desktop-s) {
-        padding: clamp(10px, 0.6rem, 15px);
+        padding: clamp(8px, 0.6rem, 20px);
       }
     }
 
@@ -118,10 +117,13 @@
       gap: rem(30);
     }
 
+    @include for-width(-mobile-l) {
+      gap: 20px;
+    }
+
     @include for-width(-mobile-md) {
       grid-template-columns: repeat(2, 1fr);
       grid-template-rows: repeat(2, auto);
-      gap: 20px;
     }
 
     @include for-width(-mobile-s) {
