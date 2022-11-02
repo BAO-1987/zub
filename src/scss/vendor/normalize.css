@@ -49,6 +49,10 @@ textarea {
   letter-spacing: 0.06em;
 }
 
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
 button,
 input {
   overflow: visible;
