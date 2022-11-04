@@ -57,7 +57,9 @@
       background-color: var(--color-black);
       opacity: 0;
       visibility: hidden;
-      transition: opacity 0.3s linear, visibility 0.3s linear;
+      transition-property: opacity, visibility;
+      transition-duration: 0.3s;
+      transition-timing-function: linear;
 
       .nav__item {
         margin: 0;
@@ -71,7 +73,6 @@
       &.open {
         opacity: 1;
         visibility: visible;
-        transition: opacity 0.3s linear, visibility 0.3s linear;
 
         @include for-width(-tablet) {
           display: block;
@@ -82,7 +83,6 @@
         position: relative;
         display: none;
         border: none;
-        transform: translateX(0);
       }
     }
   }
