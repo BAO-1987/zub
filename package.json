@@ -64,6 +64,7 @@
     "graph-tabs": "^1.0.0",
     "inputmask": "^5.0.7",
     "just-validate": "^3.3.3",
+    "masonry-layout": "^4.2.2",
     "photoswipe": "^5.3.2",
     "rellax": "^1.12.1",
     "scrollreveal": "^4.0.9",

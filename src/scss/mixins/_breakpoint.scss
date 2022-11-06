@@ -45,13 +45,6 @@ $mqs: ("mobile-sm": 345,
   }
 }
 
-/*
-._example {
-  @include for-width(-desktop) {
-    opacity: 0.5;
-  };
-}
-*/
 
 @mixin for-height($size, $size2: null) {
 
