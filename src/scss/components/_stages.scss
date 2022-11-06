@@ -37,8 +37,11 @@
       position: relative;
       border: 1px solid var(--color-white);
       padding: clamp(20px, 1.95rem, 30px);
-      letter-spacing: 0.038em;
+      font-weight: 900;
+      line-height: 1;
+      letter-spacing: 0.01em;
       text-align: center;
+      color: var(--color-blue);
       transition-property: box-shadow, border;
       transition-duration: 0.3s;
       transition-timing-function: linear;
@@ -50,12 +53,7 @@
         padding-right: clamp(5px, 1.1rem, 30px);
         counter-increment: li;
         content: counter(li, decimal-leading-zero);
-        font-weight: 900;
-        line-height: 1;
-        letter-spacing: 0.01em;
-        text-align: center;
         text-transform: uppercase;
-        color: var(--color-blue);
 
         @include for-width(+ desktop-xl) {
           font-size: 100px;
@@ -77,12 +75,7 @@
 
         display: inline-block;
         margin-bottom: rem(33);
-        font-weight: 900;
-        line-height: 1;
-        letter-spacing: 0.01em;
-        text-align: center;
         text-transform: uppercase;
-        color: var(--color-blue);
 
         @include for-width(+ desktop-xl) {
           font-size: 80px;
@@ -91,6 +84,15 @@
         @include for-width(-mobile-l) {
           margin-bottom: rem(20);
         }
+      }
+
+      p {
+        @include adaptive_size("font-size", 16, 14);
+
+        font-weight: 500;
+        line-height: 1.6;
+        letter-spacing: 0.038em;
+        color: var(--color-white);
       }
 
       a {
@@ -138,6 +140,7 @@
         letter-spacing: 0.06em;
 
         h3 {
+          color: var(--color-white);
 
           @include for-width(-mobile-l) {
             @include flex-all-center;
