@@ -65,6 +65,7 @@
   }
 
   &__item {
+    display: grid;
     position: relative;
     font-size: 14px;
 
@@ -81,14 +82,20 @@
       background-color: var(--color-blue);
     }
 
+    a {
+      display: block;
+      margin-bottom: 10px;
+      transition: color 0.3s linear;
+
+      &:hover {
+        color: var(--color-blue);
+      }
+    }
+
     span:not([class]) {
       display: inline-block;
       margin-bottom: 12px;
-      padding-left: 40px;
-
-      @include for-width(-mobile-l) {
-        padding-left: 30px;
-      }
+      padding-left: clamp(20px, 2.5rem, 45px);
     }
 
     &--mail {
@@ -122,15 +129,9 @@
   }
 
   &__link {
-    @include adaptive_size("font-size", 16, 14);
-
-    display: block;
-    margin-bottom: 10px;
-    transition: color 0.3s linear;
-
-    &:hover {
-      color: var(--color-blue);
-    }
+    display: inline-block;
+    margin-bottom: 12px;
+    padding-left: clamp(20px, 2.5rem, 45px);
   }
 }
 
